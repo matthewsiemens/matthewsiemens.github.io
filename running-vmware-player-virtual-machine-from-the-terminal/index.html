@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Matthew Siemens - Personal Blog: Running VMware Player virtual machine from the terminal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+    <link rel="stylesheet" href="/css/screen.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Matthew Siemens - Personal Blog</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/">Home</a></li>
+                <li
+                ><a href="/archives/">Archives</a></li>
+                
+                <li
+                >
+                <a href="/about">About</a>
+                </li>
+                
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div id="content">
+                
+<div id="post">
+    <div class="post-header">
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">October 13, 2012</div>
+        
+    </div>
+    <h2>Running VMware Player virtual machine from the terminal</h2>
+</div>
+<div>
+    
+    <p>Recently I was setting up a Ubuntu server in VMware Player for testing purposes. As I was setting it up, I started to wonder if it would be possible to start the Virtual Machine from the terminal. This way I would be able to start it over SSH if I wasn't in my office. After some quick looking I found a quick and easy way to accomplish this with <a href='http://en.wikipedia.org/wiki/Xvfb'>Xfvb</a>.</p><h4><a name="install&#95;xfvb"></a>Install Xfvb</h4><p>The steps to install Xfvb will depend on what distribution you are running. In <a href='http://www.archlinux.org/'>Arch Linux</a> it is as simple as running:</p>  <br /><pre><code>$ sudo pacman -S xvfb-xorg</code></pre><h4><a name="run&#95;virtual&#95;machine&#95;from&#95;terminal"></a>Run Virtual Machine from Terminal</h4><p>Once you've installed Xfvb you can start the Virtual Machine from the terminal using:</p>  <br /><pre><code>$ xvfb-run vmplayer LOCATION&#95;OF&#95;VMX&#95;FILE</code></pre><h4><a name="create&#95;a&#95;bash&#95;script&#95;to&#95;simplify&#95;the&#95;process"></a>Create a Bash Script to Simplify the Process</h4><p>You can make this much simpler by making a simple bash script like this:</p>  <br /><pre><code>#!/bin/sh
+xvfb-run vmplayer 'LOCATION&#95;OF&#95;VMX&#95;FILE'</code></pre><p>If you put the bash script in your path you will be able to start the Virtual Machine from the terminal just by typing in the name of the bash script. I'm not able to start my Virtual Machines over SSH or even set them to start when my computer starts.</p>
+</div>
+
+<div id="post-tags">
+    <b>Tags: </b>
+    
+    <a href="/tags/Terminal.html">Terminal</a>
+    
+    <a href="/tags/VMware.html">VMware</a>
+    
+    <a href="/tags/Linux.html">Linux</a>
+    
+</div>
+
+
+    <div id="prev-next">
+        
+        <a href="/blocking-ssh-brute-force-attacks-in-mikrotik-routeros">&laquo; Blocking SSH Brute Force Attacks in MikroTik RouterOS</a>
+        
+        
+        <a class="right" href="/using-trickle-to-control-bandwidth-use-in-any-program">Using Trickle to Control Bandwidth Use in Any Program &raquo;</a>
+        
+    </div>
+
+    
+
+
+</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="sidebar">
+                
+                <div id="recent">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        
+                        <li><a href="/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox">Migrating to a larger hardisk with CloneZilla and VirtualBox</a></li>
+                        
+                        <li><a href="/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange">HTML5 Mobile Site for Cavirtex.com Bitcoin exchange</a></li>
+                        
+                        <li><a href="/moving-from-wordpress-to-octopress">Moving from WordPress to OctoPress</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <div id="tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        
+                        <li><a href="/tags/Javascript.html">Javascript</a></li>
+                        
+                        <li><a href="/tags/TrueCrypt.html">TrueCrypt</a></li>
+                        
+                        <li><a href="/tags/Terminal.html">Terminal</a></li>
+                        
+                        <li><a href="/tags/Raspberry Pi.html">Raspberry Pi</a></li>
+                        
+                        <li><a href="/tags/MennoSites.ca.html">MennoSites.ca</a></li>
+                        
+                        <li><a href="/tags/WordPress.html">WordPress</a></li>
+                        
+                        <li><a href="/tags/Trickle.html">Trickle</a></li>
+                        
+                        <li><a href="/tags/apt-get.html">apt-get</a></li>
+                        
+                        <li><a href="/tags/Themes.html">Themes</a></li>
+                        
+                        <li><a href="/tags/Mikrotik.html">Mikrotik</a></li>
+                        
+                        <li><a href="/tags/StudioPress.html">StudioPress</a></li>
+                        
+                        <li><a href="/tags/Markdown.html">Markdown</a></li>
+                        
+                        <li><a href="/tags/MultiSite.html">MultiSite</a></li>
+                        
+                        <li><a href="/tags/VMware.html">VMware</a></li>
+                        
+                        <li><a href="/tags/Octopress.html">Octopress</a></li>
+                        
+                        <li><a href="/tags/Bitcoin.html">Bitcoin</a></li>
+                        
+                        <li><a href="/tags/VirtualBox.html">VirtualBox</a></li>
+                        
+                        <li><a href="/tags/Linux.html">Linux</a></li>
+                        
+                        <li><a href="/tags/Networking.html">Networking</a></li>
+                        
+                        <li><a href="/tags/Footer.html">Footer</a></li>
+                        
+                        <li><a href="/tags/Cavirtex.html">Cavirtex</a></li>
+                        
+                        <li><a href="/tags/Rsync.html">Rsync</a></li>
+                        
+                        <li><a href="/tags/Ubuntu.html">Ubuntu</a></li>
+                        
+                        <li><a href="/tags/CloneZilla.html">CloneZilla</a></li>
+                        
+                        <li><a href="/tags/Vim.html">Vim</a></li>
+                        
+                        <li><a href="/tags/Gedit.html">Gedit</a></li>
+                        
+                        <li><a href="/tags/Genesis.html">Genesis</a></li>
+                        
+                        <li><a href="/tags/SSH.html">SSH</a></li>
+                        
+                        <li><a href="/tags/RouterOS.html">RouterOS</a></li>
+                        
+                        <li><a href="/tags/Firewall.html">Firewall</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>Copyright &copy;  Matthew Siemens
+        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

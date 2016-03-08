@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Matthew Siemens - Personal Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+    <link rel="stylesheet" href="/css/screen.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Matthew Siemens - Personal Blog</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/">Home</a></li>
+                <li
+                ><a href="/archives/">Archives</a></li>
+                
+                <li
+                >
+                <a href="/about">About</a>
+                </li>
+                
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div id="content">
+                
+<div id="post">
+    
+    <div class="post-header">
+        <h2>Installing Arch Linux on the Raspberry Pi</h2>
+        <div id="post-meta">
+            
+            <div class="date">December 2, 2012</div>
+        </div>
+    </div>
+    <p>My brand-new <a href="http://raspberrypi.org/" shape="rect">Raspberry Pi</a> was delivered last night. I finally got a chance to start playing with it this evening.  The first thing I wanted to do was get my favourite Linux distribution Arch installed.</p><h2><a name="here&apos;s_a_quick_and_easy_way_to_get_&lt;a href=&apos;http://archlinuxarm.org/&apos;&gt;Arch Linux ARM&lt;/a&gt;_installed_onto_the_raspberry_pi." shape="rect"></a>Here's a quick and easy way to get <a href="http://archlinuxarm.org/" shape="rect">Arch Linux ARM</a> installed onto the Raspberry Pi.</h2>
+    <a href="/installing-arch-linux-on-the-raspberry-pi">Continue reading &#8594;</a>
+    <hr>
+    
+    <div class="post-header">
+        <h2>Blocking SSH Brute Force Attacks in MikroTik RouterOS</h2>
+        <div id="post-meta">
+            
+            <div class="date">October 14, 2012</div>
+        </div>
+    </div>
+    <p><a href="http://www.mikrotik.com/" shape="rect">Mikrotik</a> makes some great networking equipment for both business, and home uses.  I've used Mikrotik routers both while consulting and for my own personal and business use.  I use SSH to manage my Mikrotik devices and wanted to be able to detect and block any Brute Force SSH login attempts.  Here is a quick and easy way to do exactly that:</p><h4><a name="first_things_first" shape="rect"></a>First Things First</h4>
+    <a href="/blocking-ssh-brute-force-attacks-in-mikrotik-routeros">Continue reading &#8594;</a>
+    <hr>
+    
+    <div class="post-header">
+        <h2>Running VMware Player virtual machine from the terminal</h2>
+        <div id="post-meta">
+            
+            <div class="date">October 13, 2012</div>
+        </div>
+    </div>
+    <p>Recently I was setting up a Ubuntu server in VMware Player for testing purposes. As I was setting it up, I started to wonder if it would be possible to start the Virtual Machine from the terminal. This way I would be able to start it over SSH if I wasn't in my office. After some quick looking I found a quick and easy way to accomplish this with <a href="http://en.wikipedia.org/wiki/Xvfb" shape="rect">Xfvb</a>.</p><h4><a name="install_xfvb" shape="rect"></a>Install Xfvb</h4>
+    <a href="/running-vmware-player-virtual-machine-from-the-terminal">Continue reading &#8594;</a>
+    <hr>
+    
+    <div class="post-header">
+        <h2>Using Trickle to Control Bandwidth Use in Any Program</h2>
+        <div id="post-meta">
+            
+            <div class="date">March 11, 2012</div>
+        </div>
+    </div>
+    <p>There are a number of reasons why you would want to control how much bandwidth any given program is able to use. This can be done in a couple different ways, including options right with in the software, or through a software or hardware firewall. A great little program for managing bandwidth use is Trickle.  Trickle runs completely in userspace, which means we don't need to mess with a firewall, or even need root access.</p><p>If you're on Ubuntu/Debian you should be able to install Trickle using</p>
+    <a href="/using-trickle-to-control-bandwidth-use-in-any-program">Continue reading &#8594;</a>
+    <hr>
+    
+    <div class="post-header">
+        <h2>Simplifying Managing Your SSH Connections by Using an SSH Config File</h2>
+        <div id="post-meta">
+            
+            <div class="date">March 9, 2012</div>
+        </div>
+    </div>
+    <p>I've been using Linux as my primary operating system for over five years, and spent a good deal of time with it before that time.  It's only been within the last year or so that I've really begun to explore and enjoy working from the Linux/Unix command line.  It's greatly simplified my work flow when it comes to many tasks, and it seems I spend the majority of my time either in a command line or web browser now a days.  Now that nearly 100% of the time when I'm working on a remote system, whether it is a server, Linux/Unix PC, or networking equipment, I'm usually connecting with <a href="http://www.openssh.com" shape="rect">SSH.</a><br clear="none" /></p><p>SSH is an incredibly powerful tool that can be used for everything from remote terminal access, to running entire graphical programs over a network.  For me though remembering and having to type in all the IP Addresses, DNS Names, usernames and port numbers for all the SSH connections I use daily can be a real pain.  That's why setting up your own SSH config file can save huge amounts of time and effort in your day-to-day work.</p>
+    <a href="/simplifying-managing-your-ssh-connections-by-using-an-ssh-config-file">Continue reading &#8594;</a>
+    <hr>
+    
+
+    <div id="prev-next">
+        
+        <a class="left" href="/index.html">&laquo; Prev</a>
+        
+        
+        <a class="right" href="/p/3">Next &raquo;</a>
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="sidebar">
+                
+                <div id="recent">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        
+                        <li><a href="/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox">Migrating to a larger hardisk with CloneZilla and VirtualBox</a></li>
+                        
+                        <li><a href="/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange">HTML5 Mobile Site for Cavirtex.com Bitcoin exchange</a></li>
+                        
+                        <li><a href="/moving-from-wordpress-to-octopress">Moving from WordPress to OctoPress</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <div id="tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        
+                        <li><a href="/tags/Javascript.html">Javascript</a></li>
+                        
+                        <li><a href="/tags/TrueCrypt.html">TrueCrypt</a></li>
+                        
+                        <li><a href="/tags/Terminal.html">Terminal</a></li>
+                        
+                        <li><a href="/tags/Raspberry Pi.html">Raspberry Pi</a></li>
+                        
+                        <li><a href="/tags/MennoSites.ca.html">MennoSites.ca</a></li>
+                        
+                        <li><a href="/tags/WordPress.html">WordPress</a></li>
+                        
+                        <li><a href="/tags/Trickle.html">Trickle</a></li>
+                        
+                        <li><a href="/tags/apt-get.html">apt-get</a></li>
+                        
+                        <li><a href="/tags/Themes.html">Themes</a></li>
+                        
+                        <li><a href="/tags/Mikrotik.html">Mikrotik</a></li>
+                        
+                        <li><a href="/tags/StudioPress.html">StudioPress</a></li>
+                        
+                        <li><a href="/tags/Markdown.html">Markdown</a></li>
+                        
+                        <li><a href="/tags/MultiSite.html">MultiSite</a></li>
+                        
+                        <li><a href="/tags/VMware.html">VMware</a></li>
+                        
+                        <li><a href="/tags/Octopress.html">Octopress</a></li>
+                        
+                        <li><a href="/tags/Bitcoin.html">Bitcoin</a></li>
+                        
+                        <li><a href="/tags/VirtualBox.html">VirtualBox</a></li>
+                        
+                        <li><a href="/tags/Linux.html">Linux</a></li>
+                        
+                        <li><a href="/tags/Networking.html">Networking</a></li>
+                        
+                        <li><a href="/tags/Footer.html">Footer</a></li>
+                        
+                        <li><a href="/tags/Cavirtex.html">Cavirtex</a></li>
+                        
+                        <li><a href="/tags/Rsync.html">Rsync</a></li>
+                        
+                        <li><a href="/tags/Ubuntu.html">Ubuntu</a></li>
+                        
+                        <li><a href="/tags/CloneZilla.html">CloneZilla</a></li>
+                        
+                        <li><a href="/tags/Vim.html">Vim</a></li>
+                        
+                        <li><a href="/tags/Gedit.html">Gedit</a></li>
+                        
+                        <li><a href="/tags/Genesis.html">Genesis</a></li>
+                        
+                        <li><a href="/tags/SSH.html">SSH</a></li>
+                        
+                        <li><a href="/tags/RouterOS.html">RouterOS</a></li>
+                        
+                        <li><a href="/tags/Firewall.html">Firewall</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>Copyright &copy;  Matthew Siemens
+        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

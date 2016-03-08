@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Matthew Siemens - Personal Blog: Migrating to a larger hardisk with CloneZilla and VirtualBox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+    <link rel="stylesheet" href="/css/screen.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Matthew Siemens - Personal Blog</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/">Home</a></li>
+                <li
+                ><a href="/archives/">Archives</a></li>
+                
+                <li
+                >
+                <a href="/about">About</a>
+                </li>
+                
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div id="content">
+                
+<div id="post">
+    <div class="post-header">
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">April 7, 2014</div>
+        
+    </div>
+    <h2>Migrating to a larger hardisk with CloneZilla and VirtualBox</h2>
+</div>
+<div>
+    
+    <p>I run <a href='https://www.archlinux.org/'>Arch Linux</a> as my primary operating system but use <a href='https://www.virtualbox.org/'>VirtualBox</a> to run various Windows systems for developing software and accessing Windows only programs. I recently started running out of space on the hard disk for one of my virtual machines. I was quickly able to use one of my favourite Linux Boot Disks <a href='http://clonezilla.org/'>CloneZilla</a> to copy my existing virtual hard disk to a new, larger virtual hard disk. This process was done using virtual disks, but the steps are exactly the same when using physical disks.</p><p><!&ndash; more &ndash;></p><h2>Steps to migrate to new hard disk</h2><p><strong>Note: It is possible to permanently lose your data from running the commands below, be careful!</strong></p><ol><li>Download the CloneZilla <a href='http://clonezilla.org/downloads/download.php?branch=stable'>live CD</a><ul><li>In most cases you want to download the <strong>i486</strong> infrastructure in the <strong>.iso</strong> format</li></ul></li><li>Ensure the virtual machine is shut off</li><li>Add a new virtual hard disk to your virtual machine<ul><li>Click on the machine in the VirtualBox Manager</li><li>Click on the Settings button at the top (Yellow Gear Icon)</li><li>Click on the Storage label</li><li>Click on the far right disk label that is in the row beside "Controller: SATA"</li><li>Create a new disk of whatever size you want., <strong>It must be bigger or at least the same size as your current disk</strong></li></ul></li><li>Mount the CloneZilla iso<ul><li>Click the CD/DVD drive in your Storage settings and at the far right click on the small CD image.</li><li>Click <em>Choose a virtual CD/DVD image file</em> from the dropdown menu</li><li>Navigate and click on the CloneZilla iso file you downloaded</li></ul></li><li>Start the virtual machine</li><li>Select first option in the Grub boot menu (Default settings)</li><li>Select your language</li><li>Select <strong>Don't touch keymap</strong></li><li>Select <strong>Start_Clonezilla</strong></li><li>Select <strong>device-device</strong></li><li>Select <strong>Beginner</strong></li><li>Select <strong>disk<i>to</i>local_disk</strong></li><li>Select the original disk</li><li>Select the new disk</li><li>Select <strong>Skip checking/repairing source file system</strong></li><li>Press 'Enter' and press y to go through the confirmation messages</li><li>When CloneZilla is finished copying it will display a message prompting you to press "Enter"<ul><li>Press <em>Enter</em></li><li>Select <em>Poweroff</em></li><li>Press <em>Enter</em> again when prompted</li></ul></li><li>The CloneZilla disk should have automatically been dismounted but if not umount it from the Storage section in Settings</li><li>Remove the original disk from the Storage section in Settings<ul><li>Set the new disk to use the same SATA Port number that the original disk was using under the attributes section on the right.</li></ul></li><li>You will have to format the new storage space for Windows or any other operating system to actually use the new space</li><li>Optionally once you have tested that the new drive is working, delete the old drive from your system.</li></ol><p>This is just one of the many uses of Clonezilla. It is an amazingly powerful tool for dealing with disks, partitions, and images.</p><p>Post how you use Clonezilla in the comments!</p>
+</div>
+
+<div id="post-tags">
+    <b>Tags: </b>
+    
+    <a href="/tags/VirtualBox.html">VirtualBox</a>
+    
+    <a href="/tags/Linux.html">Linux</a>
+    
+    <a href="/tags/CloneZilla.html">CloneZilla</a>
+    
+</div>
+
+
+    <div id="prev-next">
+        
+        
+        <a class="right" href="/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange">HTML5 Mobile Site for Cavirtex.com Bitcoin exchange &raquo;</a>
+        
+    </div>
+
+    
+
+
+</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="sidebar">
+                
+                <div id="recent">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        
+                        <li><a href="/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox">Migrating to a larger hardisk with CloneZilla and VirtualBox</a></li>
+                        
+                        <li><a href="/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange">HTML5 Mobile Site for Cavirtex.com Bitcoin exchange</a></li>
+                        
+                        <li><a href="/moving-from-wordpress-to-octopress">Moving from WordPress to OctoPress</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <div id="tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        
+                        <li><a href="/tags/Javascript.html">Javascript</a></li>
+                        
+                        <li><a href="/tags/TrueCrypt.html">TrueCrypt</a></li>
+                        
+                        <li><a href="/tags/Terminal.html">Terminal</a></li>
+                        
+                        <li><a href="/tags/Raspberry Pi.html">Raspberry Pi</a></li>
+                        
+                        <li><a href="/tags/MennoSites.ca.html">MennoSites.ca</a></li>
+                        
+                        <li><a href="/tags/WordPress.html">WordPress</a></li>
+                        
+                        <li><a href="/tags/Trickle.html">Trickle</a></li>
+                        
+                        <li><a href="/tags/apt-get.html">apt-get</a></li>
+                        
+                        <li><a href="/tags/Themes.html">Themes</a></li>
+                        
+                        <li><a href="/tags/Mikrotik.html">Mikrotik</a></li>
+                        
+                        <li><a href="/tags/StudioPress.html">StudioPress</a></li>
+                        
+                        <li><a href="/tags/Markdown.html">Markdown</a></li>
+                        
+                        <li><a href="/tags/MultiSite.html">MultiSite</a></li>
+                        
+                        <li><a href="/tags/VMware.html">VMware</a></li>
+                        
+                        <li><a href="/tags/Octopress.html">Octopress</a></li>
+                        
+                        <li><a href="/tags/Bitcoin.html">Bitcoin</a></li>
+                        
+                        <li><a href="/tags/VirtualBox.html">VirtualBox</a></li>
+                        
+                        <li><a href="/tags/Linux.html">Linux</a></li>
+                        
+                        <li><a href="/tags/Networking.html">Networking</a></li>
+                        
+                        <li><a href="/tags/Footer.html">Footer</a></li>
+                        
+                        <li><a href="/tags/Cavirtex.html">Cavirtex</a></li>
+                        
+                        <li><a href="/tags/Rsync.html">Rsync</a></li>
+                        
+                        <li><a href="/tags/Ubuntu.html">Ubuntu</a></li>
+                        
+                        <li><a href="/tags/CloneZilla.html">CloneZilla</a></li>
+                        
+                        <li><a href="/tags/Vim.html">Vim</a></li>
+                        
+                        <li><a href="/tags/Gedit.html">Gedit</a></li>
+                        
+                        <li><a href="/tags/Genesis.html">Genesis</a></li>
+                        
+                        <li><a href="/tags/SSH.html">SSH</a></li>
+                        
+                        <li><a href="/tags/RouterOS.html">RouterOS</a></li>
+                        
+                        <li><a href="/tags/Firewall.html">Firewall</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>Copyright &copy;  Matthew Siemens
+        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

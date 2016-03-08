@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Matthew Siemens - Personal Blog: Blocking SSH Brute Force Attacks in MikroTik RouterOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+    <link rel="stylesheet" href="/css/screen.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Matthew Siemens - Personal Blog</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/">Home</a></li>
+                <li
+                ><a href="/archives/">Archives</a></li>
+                
+                <li
+                >
+                <a href="/about">About</a>
+                </li>
+                
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div id="content">
+                
+<div id="post">
+    <div class="post-header">
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">October 14, 2012</div>
+        
+    </div>
+    <h2>Blocking SSH Brute Force Attacks in MikroTik RouterOS</h2>
+</div>
+<div>
+    
+    <p><a href='http://www.mikrotik.com/'>Mikrotik</a> makes some great networking equipment for both business, and home uses.  I've used Mikrotik routers both while consulting and for my own personal and business use.  I use SSH to manage my Mikrotik devices and wanted to be able to detect and block any Brute Force SSH login attempts.  Here is a quick and easy way to do exactly that:</p><h4><a name="first&#95;things&#95;first"></a>First Things First</h4><p>If you haven't done this already, try changing the port SSH is running on to something other than the default.  When logged in through SSH or Telnet you can edit the SSH port with:</p>  <br />  <br /><pre><code>/ip service edit ssh value-name=port
+</code></pre><p>After changing the port to something other than 22 hit Ctrl+o to save your change.</p><h4><a name="using&#95;firewall&#95;filters"></a>Using Firewall Filters</h4><p>Firewall rules are read from the top down, meaning if a connection matches a rule it won't look any further.  This is why the following rules seem like they are backwards.</p><p>Navigate to: <strong>/ip firewall filter</strong> <i>If you are using a non-standard SSH port, change 22 in the examples below to whatever port you are using.</i></p>  <br />  <br /><pre><code>add chain=input \
+protocol=tcp \
+dst-port=22 \
+src-address-list=ssh&#95;blacklist \
+action=drop \
+comment=&quot;Drop SSH connection from IP addresses in ssh&#95;blacklist address list&quot; \
+disabled=no
+</code></pre><p><i>This rule will drop any SSH connections that come from IP addresses in the <strong>"ssh</i>blacklist"</strong> address list._</p>  <br />  <br /><pre><code>add chain=input \
+protocol=tcp \
+dst-port=22 \
+connection-state=new \
+src-address-list=ssh&#95;attempt&#95;3 \
+action=add-src-to-address-list \
+address-list=ssh&#95;blacklist \
+address-list-timeout=2w \
+comment=&quot;Blocked IP address that attempted multiple SSH connections&quot; \
+disabled=no
+</code></pre><p><i>This rule will add any IP address that attempts 4 SSH connections (either successfully or not) within the set time limit to the <strong>"ssh</i>blacklist"</strong> address list._</p>  <br />  <br /><pre><code>add chain=input \
+protocol=tcp \
+dst-port=22 \
+connection-state=new \
+src-address-list=ssh&#95;attempt&#95;2 \
+action=add-src-to-address-list \
+address-list=ssh&#95;attempt&#95;3 \
+address-list-timeout=1m \
+comment=&quot;IP address that attempted to create 3 SSH connections&quot; \
+disabled=no
+</code></pre><p><i>This rule will add any IP address that attempts 3 SSH connections (either successfully or not) within the set time limit to the <strong>"ssh</i>attempt<i>3"</strong> address list.</i></p>  <br />  <br /><pre><code>add chain=input \
+protocol=tcp \
+dst-port=22 \
+connection-state=new \
+src-address-list=ssh&#95;attempt&#95;1 \
+action=add-src-to-address-list \
+address-list=ssh&#95;attempt&#95;2 \
+address-list-timeout=1m \
+comment=&quot;IP address that attempted to create 2 SSH connections&quot; \
+disabled=no
+</code></pre><p><i>This rule will add any IP address that attempts 2 SSH connections (either successfully or not) within the set time limit to the <strong>"ssh</i>attempt<i>2"</strong> address list.</i></p>  <br />  <br /><pre><code>add chain=input \
+protocol=tcp \
+dst-port=22 \
+connection-state=new \
+action=add-src-to-address-list \
+address-list=ssh&#95;attempt&#95;1 \
+address-list-timeout=1m \
+comment=&quot;IP address that attempted to create an SSH connections&quot; \
+disabled=no
+</code></pre><p><i>This rule will add any IP address that attempts an SSH connection (either successfully or not) within the set time limit to the <strong>"ssh</i>attempt<i>1"</strong> address list.</i></p><h4><a name="summary&#95;-&#95;what&#95;does&#95;it&#95;do?"></a>Summary - What does it do?</h4><p>What these five Firewall Filter rules do is detect everytime someone tries to connect to the Mikrotik SSH server (it doesn't matter if they succed in logging in or not).<br /></p><p>  1.  The first time an attempt to login occurs the IP address where the attempt comes from is added to the <strong>"ssh<i>attempt</i>1"</strong> address list for 1 minute.<br /></p><p>  2.  If a second attempt to login to SSH occurs from the same IP address while it is still in <strong>"ssh<i>attempt</i>1"</strong> than the IP address will be added to the <strong>"ssh<i>attempt</i>2"</strong> address list for 1 minute.</p><p>  3.  If a third attempt to login to SSH occurs from the same IP address while it is still in <strong>"ssh<i>attempt</i>2"</strong> than the IP address will be added to the <strong>"ssh<i>attempt</i>3"</strong> address list for 1 minute.</p><p>  4.  If a fourth attempt to login to SSH occurs from the same IP address while it is still in <strong>"ssh<i>attempt</i>3"</strong> than the IP address will be added to the <strong>"ssh_blacklist"</strong> address list and all further attempts will be blocked for the next 2 weeks by the first filter rule we added.</p><p>You can modify the <i>address=list-timeout</i> value to change the amount of time that IP addresses stay in each address list to suit your specific needs.</p><p><i>Inspiration for this post came from <a href='http://wiki.mikrotik.com/wiki/Bruteforce_login_prevention_%28FTP'>this</a> Mikrotik Wiki article</i></p>
+</div>
+
+<div id="post-tags">
+    <b>Tags: </b>
+    
+    <a href="/tags/Mikrotik.html">Mikrotik</a>
+    
+    <a href="/tags/Networking.html">Networking</a>
+    
+    <a href="/tags/RouterOS.html">RouterOS</a>
+    
+    <a href="/tags/Firewall.html">Firewall</a>
+    
+</div>
+
+
+    <div id="prev-next">
+        
+        <a href="/installing-arch-linux-on-the-raspberry-pi">&laquo; Installing Arch Linux on the Raspberry Pi</a>
+        
+        
+        <a class="right" href="/running-vmware-player-virtual-machine-from-the-terminal">Running VMware Player virtual machine from the terminal &raquo;</a>
+        
+    </div>
+
+    
+
+
+</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="sidebar">
+                
+                <div id="recent">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        
+                        <li><a href="/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox">Migrating to a larger hardisk with CloneZilla and VirtualBox</a></li>
+                        
+                        <li><a href="/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange">HTML5 Mobile Site for Cavirtex.com Bitcoin exchange</a></li>
+                        
+                        <li><a href="/moving-from-wordpress-to-octopress">Moving from WordPress to OctoPress</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <div id="tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        
+                        <li><a href="/tags/Javascript.html">Javascript</a></li>
+                        
+                        <li><a href="/tags/TrueCrypt.html">TrueCrypt</a></li>
+                        
+                        <li><a href="/tags/Terminal.html">Terminal</a></li>
+                        
+                        <li><a href="/tags/Raspberry Pi.html">Raspberry Pi</a></li>
+                        
+                        <li><a href="/tags/MennoSites.ca.html">MennoSites.ca</a></li>
+                        
+                        <li><a href="/tags/WordPress.html">WordPress</a></li>
+                        
+                        <li><a href="/tags/Trickle.html">Trickle</a></li>
+                        
+                        <li><a href="/tags/apt-get.html">apt-get</a></li>
+                        
+                        <li><a href="/tags/Themes.html">Themes</a></li>
+                        
+                        <li><a href="/tags/Mikrotik.html">Mikrotik</a></li>
+                        
+                        <li><a href="/tags/StudioPress.html">StudioPress</a></li>
+                        
+                        <li><a href="/tags/Markdown.html">Markdown</a></li>
+                        
+                        <li><a href="/tags/MultiSite.html">MultiSite</a></li>
+                        
+                        <li><a href="/tags/VMware.html">VMware</a></li>
+                        
+                        <li><a href="/tags/Octopress.html">Octopress</a></li>
+                        
+                        <li><a href="/tags/Bitcoin.html">Bitcoin</a></li>
+                        
+                        <li><a href="/tags/VirtualBox.html">VirtualBox</a></li>
+                        
+                        <li><a href="/tags/Linux.html">Linux</a></li>
+                        
+                        <li><a href="/tags/Networking.html">Networking</a></li>
+                        
+                        <li><a href="/tags/Footer.html">Footer</a></li>
+                        
+                        <li><a href="/tags/Cavirtex.html">Cavirtex</a></li>
+                        
+                        <li><a href="/tags/Rsync.html">Rsync</a></li>
+                        
+                        <li><a href="/tags/Ubuntu.html">Ubuntu</a></li>
+                        
+                        <li><a href="/tags/CloneZilla.html">CloneZilla</a></li>
+                        
+                        <li><a href="/tags/Vim.html">Vim</a></li>
+                        
+                        <li><a href="/tags/Gedit.html">Gedit</a></li>
+                        
+                        <li><a href="/tags/Genesis.html">Genesis</a></li>
+                        
+                        <li><a href="/tags/SSH.html">SSH</a></li>
+                        
+                        <li><a href="/tags/RouterOS.html">RouterOS</a></li>
+                        
+                        <li><a href="/tags/Firewall.html">Firewall</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>Copyright &copy;  Matthew Siemens
+        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

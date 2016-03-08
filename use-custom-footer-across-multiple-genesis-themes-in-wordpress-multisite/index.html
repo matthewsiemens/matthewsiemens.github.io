@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Matthew Siemens - Personal Blog: Use Custom Footer Across Multiple Genesis Themes in WordPress MultiSite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+    <link rel="stylesheet" href="/css/screen.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Matthew Siemens - Personal Blog</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/">Home</a></li>
+                <li
+                ><a href="/archives/">Archives</a></li>
+                
+                <li
+                >
+                <a href="/about">About</a>
+                </li>
+                
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div id="content">
+                
+<div id="post">
+    <div class="post-header">
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">January 16, 2012</div>
+        
+    </div>
+    <h2>Use Custom Footer Across Multiple Genesis Themes in WordPress MultiSite</h2>
+</div>
+<div>
+    
+    <p>I’ve recently helped launch a number of projects that use WordPress MultiSite heavily, including <a href='http:/mennosites.ca'>MennoSites.ca</a> and <a href='http://ourtownsite.ca'>OurTownSite.ca</a>.  This post outlines how to quickly and easily setup a simple WordPress plugin to let you add the same custom footer to every Genesis Theme in your WordPress MultiSite install.</p><p>I’ve used a number of Theme suppliers working with WordPress over the years.  Lately I’ve begun using Themes based on the <a href='http://studiopress.com'>Genesis</a> Framework almost exclusively. When I started working with Genesis I took a look around to see what was the best way to change the Theme footer and include my own content. I found this code snippet on the <a href='http://www.studiopress.com/tutorials/genesis/customize-footer#custom-footer'>StudioPress</a> site that does exactly what I wanted.</p><p>I found this code snippet on the <a href='http://www.studiopress.com/tutorials/genesis/customize-footer#custom-footer'>StudioPress</a> site that does exactly what I wanted.</p>  <br />  <br /><pre><code>/&#42;&#42; Customize the credits &#42;/
+add&#95;filter&#40;'genesis&#95;footer&#95;creds&#95;text', 'custom&#95;footer&#95;creds&#95;text'&#41;;
+function custom&#95;footer&#95;creds&#95;text&#40;$creds&#41; {
+    $creds = 'Copyright &amp;copy; &amp;middot; &lt;a href=&quot;http://mydomain.com&quot;&gt;My Custom Link&lt;/a&gt; &amp;middot; Built on the &lt;a href=&quot;http://www.studiopress.com/themes/genesis&quot; title=&quot;Genesis Framework&quot;&gt;Genesis Framework&lt;/a&gt;';
+    return $creds;
+}</code></pre><p>If you copy and paste this code into your Child Themes function file, you can quickly and easily modify the Themes footer.</p><p>I wanted to make a few changes to customize the footer for <a href='http://mennosites.ca'>MennoSites.ca</a>. I wanted to display a copyright notice for the current website, a link to the main <a href='http://mennosites.ca'>MennoSites.ca</a> site and a link to the WordPress Administration area for the current site. I used the PHP <code>date</code> function to display the current year for the copyright notice. Than I used the WordPress <code>site&#95;url&#40;&#41;</code> function and the WordPress variable <code>$blog&#95;title</code> together create a link to with the name of the current site and its address for the copyright notice. After that I simply hard-coded a link to <a href='http://mennosites.ca'>MennoSites</a>. Finally I used the WordPress <code>site&#95;url&#40;&#41;</code> function one last time to create a link to the current sites WordPress Administration Section. You can see the code snippet I'm using below.</p>  <br />  <br /><pre><code>/&#42;&#42; Customize the credits &#42;/
+add&#95;filter&#40;'genesis&#95;footer&#95;creds&#95;text', 'custom&#95;footer&#95;creds&#95;text'&#41;;
+function custom&#95;footer&#95;creds&#95;text&#40;$creds&#41; {
+    $blog&#95;title = get&#95;bloginfo&#40;&#41;;
+    $creds = 'Copyright &#40;C&#41; '.date&#40;Y&#41;.' &amp;middot; &lt;a href=&quot;'.site&#95;url&#40;&#41;.'&quot;&gt;'.$blog&#95;title.'&lt;/a&gt; &amp;middot; Part of the &lt;a href=&quot;http://mennosites.ca&quot; title=&quot;MennoSites.ca Network&quot;&gt;MennoSites.ca Network&lt;/a&gt; &amp;middot; &lt;a href=&quot;'.site&#95;url&#40;&#41;.'/wp-admin/&quot; title=&quot;Website Admin&quot;&gt;Website Admin&lt;/a&gt;';
+    return $creds;
+}
+</code></pre><p>This snippet is in use on <a href='http://mennosites.ca'>MennoSites.ca</a> and you can actually see it being used at the bottom of this page. Using <code>date&#40;Y&#41;</code>,<code>.site&#95;url</code>,<code>$blog&#95;title</code> means that our copyright information is always up to date, and that this snippet will work on any WordPress Site using a Genesis Theme without any other modifications. The snippet will always display the correct links for whatever site it is added too.</p><p>On <a href='http://mennosites.ca'>MennoSites.ca</a> we have dozens of Genesis Themes available, instead of adding this snippet to the functions.php file of every theme I wanted to have one location where I could add this snippet and modify it in the future. Using the extensible power of WordPress I created a simple plugin to do exactly that.</p><p>To do the same thing, just create a file called easy-genesis-footer.php and open it with your favourite editor. Now add the following code to your file.</p>  <br />  <br /><pre><code>&lt;?php 
+/&#42; Plugin Name: MennoSites.ca Easy Genesis Footer Plugin 
+URI: http://mennosites.ca 
+Description: Manage The Footer For Your Genesis Themes All In One Place. 
+Version: 1.0 
+Author: Matthew Siemens 
+Author URI: http://matthewsiemens.com 
+License: GPL2 &#42;/
+?&gt;
+</code></pre><p>Now just add the code snippet from above so that your file looks like this.</p>  <br />  <br /><pre><code>&lt;?php
+Plugin Name: MennoSites.ca Easy Genesis Footer
+Plugin URI: http://mennosites.ca
+Description: Manage The Footer For Your Genesis Themes All In One Place.
+Version: 1.0
+Author: Matthew Siemens
+Author URI: http://matthewsiemens.com
+License: GPL2
+&#42;/
+
+/&#42;&#42; Customize the credits &#42;/
+add&#95;filter&#40;'genesis&#95;footer&#95;creds&#95;text', 'custom&#95;footer&#95;creds&#95;text'&#41;;
+function custom&#95;footer&#95;creds&#95;text&#40;$creds&#41; {
+    $blog&#95;title = get&#95;bloginfo&#40;&#41;;
+    $creds = 'Copyright &#40;C&#41; '.date&#40;Y&#41;.' &amp;middot; &lt;a href=&quot;'.site&#95;url&#40;&#41;.'&quot;&gt;'.$blog&#95;title.'&lt;/a&gt; &amp;middot; Part of the &lt;a href=&quot;http://mennosites.ca&quot; title=&quot;MennoSites.ca Network&quot;&gt;MennoSites.ca Network&lt;/a&gt; &amp;middot; &lt;a href=&quot;'.site&#95;url&#40;&#41;.'/wp-admin/&quot; title=&quot;Website Admin&quot;&gt;Website Admin&lt;/a&gt;';
+    return $creds;
+}
+?&gt;
+</code></pre><p>Just remove the link to <a href='http://mennosites.ca'>MennoSites.ca</a> and replace it with a link to your own website. On your web host create a folder called mu-plugins inside wp-content if one doesn't already exist and upload the file you created to it. This will force the plugin to be enabled across your WordPress MultiSite network, and will update and display your new footer automatically. Please only use this plugin if you are only using Genesis Themes on your MultiSite setup, or you might run into some issues.</p><p>I hope this information was helpful, I know it's saved me from modifying dozens of functions.php files every time I want to make a change to the footer.</p>
+</div>
+
+<div id="post-tags">
+    <b>Tags: </b>
+    
+    <a href="/tags/MennoSites.ca.html">MennoSites.ca</a>
+    
+    <a href="/tags/WordPress.html">WordPress</a>
+    
+    <a href="/tags/Themes.html">Themes</a>
+    
+    <a href="/tags/StudioPress.html">StudioPress</a>
+    
+    <a href="/tags/MultiSite.html">MultiSite</a>
+    
+    <a href="/tags/Footer.html">Footer</a>
+    
+    <a href="/tags/Genesis.html">Genesis</a>
+    
+</div>
+
+
+    <div id="prev-next">
+        
+        <a href="/running-rsync-on-a-non-standard-port">&laquo; Running RSYNC on a non-standard port</a>
+        
+        
+    </div>
+
+    
+
+
+</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="sidebar">
+                
+                <div id="recent">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        
+                        <li><a href="/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox">Migrating to a larger hardisk with CloneZilla and VirtualBox</a></li>
+                        
+                        <li><a href="/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange">HTML5 Mobile Site for Cavirtex.com Bitcoin exchange</a></li>
+                        
+                        <li><a href="/moving-from-wordpress-to-octopress">Moving from WordPress to OctoPress</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <div id="tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        
+                        <li><a href="/tags/Javascript.html">Javascript</a></li>
+                        
+                        <li><a href="/tags/TrueCrypt.html">TrueCrypt</a></li>
+                        
+                        <li><a href="/tags/Terminal.html">Terminal</a></li>
+                        
+                        <li><a href="/tags/Raspberry Pi.html">Raspberry Pi</a></li>
+                        
+                        <li><a href="/tags/MennoSites.ca.html">MennoSites.ca</a></li>
+                        
+                        <li><a href="/tags/WordPress.html">WordPress</a></li>
+                        
+                        <li><a href="/tags/Trickle.html">Trickle</a></li>
+                        
+                        <li><a href="/tags/apt-get.html">apt-get</a></li>
+                        
+                        <li><a href="/tags/Themes.html">Themes</a></li>
+                        
+                        <li><a href="/tags/Mikrotik.html">Mikrotik</a></li>
+                        
+                        <li><a href="/tags/StudioPress.html">StudioPress</a></li>
+                        
+                        <li><a href="/tags/Markdown.html">Markdown</a></li>
+                        
+                        <li><a href="/tags/MultiSite.html">MultiSite</a></li>
+                        
+                        <li><a href="/tags/VMware.html">VMware</a></li>
+                        
+                        <li><a href="/tags/Octopress.html">Octopress</a></li>
+                        
+                        <li><a href="/tags/Bitcoin.html">Bitcoin</a></li>
+                        
+                        <li><a href="/tags/VirtualBox.html">VirtualBox</a></li>
+                        
+                        <li><a href="/tags/Linux.html">Linux</a></li>
+                        
+                        <li><a href="/tags/Networking.html">Networking</a></li>
+                        
+                        <li><a href="/tags/Footer.html">Footer</a></li>
+                        
+                        <li><a href="/tags/Cavirtex.html">Cavirtex</a></li>
+                        
+                        <li><a href="/tags/Rsync.html">Rsync</a></li>
+                        
+                        <li><a href="/tags/Ubuntu.html">Ubuntu</a></li>
+                        
+                        <li><a href="/tags/CloneZilla.html">CloneZilla</a></li>
+                        
+                        <li><a href="/tags/Vim.html">Vim</a></li>
+                        
+                        <li><a href="/tags/Gedit.html">Gedit</a></li>
+                        
+                        <li><a href="/tags/Genesis.html">Genesis</a></li>
+                        
+                        <li><a href="/tags/SSH.html">SSH</a></li>
+                        
+                        <li><a href="/tags/RouterOS.html">RouterOS</a></li>
+                        
+                        <li><a href="/tags/Firewall.html">Firewall</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>Copyright &copy;  Matthew Siemens
+        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

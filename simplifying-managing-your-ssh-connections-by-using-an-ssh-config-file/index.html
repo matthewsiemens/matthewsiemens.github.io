@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Matthew Siemens - Personal Blog: Simplifying Managing Your SSH Connections by Using an SSH Config File</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+    <link rel="stylesheet" href="/css/screen.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Matthew Siemens - Personal Blog</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/">Home</a></li>
+                <li
+                ><a href="/archives/">Archives</a></li>
+                
+                <li
+                >
+                <a href="/about">About</a>
+                </li>
+                
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div id="content">
+                
+<div id="post">
+    <div class="post-header">
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">March 9, 2012</div>
+        
+    </div>
+    <h2>Simplifying Managing Your SSH Connections by Using an SSH Config File</h2>
+</div>
+<div>
+    
+    <p>I've been using Linux as my primary operating system for over five years, and spent a good deal of time with it before that time.  It's only been within the last year or so that I've really begun to explore and enjoy working from the Linux/Unix command line.  It's greatly simplified my work flow when it comes to many tasks, and it seems I spend the majority of my time either in a command line or web browser now a days.  Now that nearly 100% of the time when I'm working on a remote system, whether it is a server, Linux/Unix PC, or networking equipment, I'm usually connecting with <a href='http://www.openssh.com'>SSH.</a><br /></p><p>SSH is an incredibly powerful tool that can be used for everything from remote terminal access, to running entire graphical programs over a network.  For me though remembering and having to type in all the IP Addresses, DNS Names, usernames and port numbers for all the SSH connections I use daily can be a real pain.  That's why setting up your own SSH config file can save huge amounts of time and effort in your day-to-day work.</p><p>This tutorial will be much easier to follow if you have a basic understanding of how to use SSH. The steps in this tutorial were performed on <a href='http://www.ubuntu.com'>Ubuntu 11.10.</a>  You may need to modify some steps depending on what system you are running.</p><h4><a name="gui&#95;version"></a>GUI Version</h4><ol><li>Open Gedit (or your editor of your choice)</li><li>Click File->SaveGo to your home folder, and display hidden files by hitting CTRL+H on your keyboard.Open the .ssh folder and save your new file as config</li></ol><h4><a name="command&#95;line&#95;version"></a>Command Line Version</h4><ol><li>First open up the terminal on your Linux/Unix based system.</li><li>Use vi (or any editor of your choice)</li></ol>  <br />  <br /><pre><code>vi &#126;/.ssh/config
+</code></pre><ol><li>There are many options that you can set in a config file, but we will go over the settings that I usually use.  Here's an example:</li></ol>  <br />  <br /><pre><code>Host myServer
+
+HostName example.com
+User root
+Port 222
+
+
+Host myDesktop
+
+Hostname 192.168.1.100
+</code></pre><p>This example shows two different SSH connections and their different options.  The first is an example server that we want to connect to at example.com, with the username root, and where the SSH service is running on the non-standard port 222.  The second is an example of a computer on your local network.  As you can see we used a local IP address instead of a DNS name, also we didn't bother setting a port number since it is running on the standard port 22.  Also because in this example I'm assuming your connecting from another computer you own at the location there is no username set since I'm assuming you are using the same username on both computers you're using for the connection.</p><ol><li>Other options that I often use would be ServerAliveInterval, and ServerAliveCountMax.</li></ol>  <br />  <br /><pre><code>Host myServer
+
+HostName example.com
+User root
+Port 222
+ServerAliveInterval 30
+ServerAliveCountMax 120
+
+Host myDesktop
+
+Hostname 192.168.1.100
+ServerAliveInterval 30
+ServerAliveCountMax 120
+</code></pre><p>This example would keep your SSH connection live for an hour by refreshing the connection every 30 seconds.  This can be handy if you don't want to be logged out every time you step away from your keyboard.</p><p>With your new SSH Config file instead of having to type in:</p>  <br />  <br /><pre><code>ssh -p 222 root@example.com 
+</code></pre><p>You can just use:</p>  <br />  <br /><pre><code>ssh myServer
+</code></pre><p>Hope this little trick saves you as much time as it has saved me.</p><h4><a name="this&#95;post&#95;is&#95;cross&#95;posted&#95;from&#95;<a href='http://mennosites.ca'>MennoSites.ca</a>"></a>This post is cross posted from <a href='http://mennosites.ca'>MennoSites.ca</a></h4>
+</div>
+
+<div id="post-tags">
+    <b>Tags: </b>
+    
+    <a href="/tags/Terminal.html">Terminal</a>
+    
+    <a href="/tags/Linux.html">Linux</a>
+    
+    <a href="/tags/Ubuntu.html">Ubuntu</a>
+    
+    <a href="/tags/Vim.html">Vim</a>
+    
+    <a href="/tags/Gedit.html">Gedit</a>
+    
+    <a href="/tags/SSH.html">SSH</a>
+    
+</div>
+
+
+    <div id="prev-next">
+        
+        <a href="/using-trickle-to-control-bandwidth-use-in-any-program">&laquo; Using Trickle to Control Bandwidth Use in Any Program</a>
+        
+        
+        <a class="right" href="/fix-vi-in-ubuntu">Fix VIM in Ubuntu &raquo;</a>
+        
+    </div>
+
+    
+
+
+</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="sidebar">
+                
+                <div id="recent">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        
+                        <li><a href="/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox">Migrating to a larger hardisk with CloneZilla and VirtualBox</a></li>
+                        
+                        <li><a href="/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange">HTML5 Mobile Site for Cavirtex.com Bitcoin exchange</a></li>
+                        
+                        <li><a href="/moving-from-wordpress-to-octopress">Moving from WordPress to OctoPress</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <div id="tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        
+                        <li><a href="/tags/Javascript.html">Javascript</a></li>
+                        
+                        <li><a href="/tags/TrueCrypt.html">TrueCrypt</a></li>
+                        
+                        <li><a href="/tags/Terminal.html">Terminal</a></li>
+                        
+                        <li><a href="/tags/Raspberry Pi.html">Raspberry Pi</a></li>
+                        
+                        <li><a href="/tags/MennoSites.ca.html">MennoSites.ca</a></li>
+                        
+                        <li><a href="/tags/WordPress.html">WordPress</a></li>
+                        
+                        <li><a href="/tags/Trickle.html">Trickle</a></li>
+                        
+                        <li><a href="/tags/apt-get.html">apt-get</a></li>
+                        
+                        <li><a href="/tags/Themes.html">Themes</a></li>
+                        
+                        <li><a href="/tags/Mikrotik.html">Mikrotik</a></li>
+                        
+                        <li><a href="/tags/StudioPress.html">StudioPress</a></li>
+                        
+                        <li><a href="/tags/Markdown.html">Markdown</a></li>
+                        
+                        <li><a href="/tags/MultiSite.html">MultiSite</a></li>
+                        
+                        <li><a href="/tags/VMware.html">VMware</a></li>
+                        
+                        <li><a href="/tags/Octopress.html">Octopress</a></li>
+                        
+                        <li><a href="/tags/Bitcoin.html">Bitcoin</a></li>
+                        
+                        <li><a href="/tags/VirtualBox.html">VirtualBox</a></li>
+                        
+                        <li><a href="/tags/Linux.html">Linux</a></li>
+                        
+                        <li><a href="/tags/Networking.html">Networking</a></li>
+                        
+                        <li><a href="/tags/Footer.html">Footer</a></li>
+                        
+                        <li><a href="/tags/Cavirtex.html">Cavirtex</a></li>
+                        
+                        <li><a href="/tags/Rsync.html">Rsync</a></li>
+                        
+                        <li><a href="/tags/Ubuntu.html">Ubuntu</a></li>
+                        
+                        <li><a href="/tags/CloneZilla.html">CloneZilla</a></li>
+                        
+                        <li><a href="/tags/Vim.html">Vim</a></li>
+                        
+                        <li><a href="/tags/Gedit.html">Gedit</a></li>
+                        
+                        <li><a href="/tags/Genesis.html">Genesis</a></li>
+                        
+                        <li><a href="/tags/SSH.html">SSH</a></li>
+                        
+                        <li><a href="/tags/RouterOS.html">RouterOS</a></li>
+                        
+                        <li><a href="/tags/Firewall.html">Firewall</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>Copyright &copy;  Matthew Siemens
+        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

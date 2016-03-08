@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Matthew Siemens - Personal Blog: Installing Arch Linux on the Raspberry Pi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+    <link rel="stylesheet" href="/css/screen.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Matthew Siemens - Personal Blog</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/">Home</a></li>
+                <li
+                ><a href="/archives/">Archives</a></li>
+                
+                <li
+                >
+                <a href="/about">About</a>
+                </li>
+                
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div id="content">
+                
+<div id="post">
+    <div class="post-header">
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">December 2, 2012</div>
+        
+    </div>
+    <h2>Installing Arch Linux on the Raspberry Pi</h2>
+</div>
+<div>
+    
+    <p>My brand-new <a href='http://raspberrypi.org/'>Raspberry Pi</a> was delivered last night. I finally got a chance to start playing with it this evening.  The first thing I wanted to do was get my favourite Linux distribution Arch installed.</p><h2><a name="here's&#95;a&#95;quick&#95;and&#95;easy&#95;way&#95;to&#95;get&#95;<a href='http://archlinuxarm.org/'>Arch Linux ARM</a>&#95;installed&#95;onto&#95;the&#95;raspberry&#95;pi."></a>Here's a quick and easy way to get <a href='http://archlinuxarm.org/'>Arch Linux ARM</a> installed onto the Raspberry Pi.</h2><p><i>These instructions are taken directly from <a href='http://archlinuxarm.org/platforms/armv6/raspberry-pi'>http://archlinuxarm.org/</a></i></p>	<ol><li>Download the zip file containing the dd image from one of these resources:</li></ol>	<pre><code>&#42; &#91;Torrent&#93;&#40;http://downloads.raspberrypi.org/images/archlinuxarm/archlinux-hf-2012-09-18/archlinux-hf-2012-09-18.zip.torrent&#41;</code></pre>	<pre><code>&#42; &#91;Direct Download&#93;&#40;http://downloads.raspberrypi.org/images/archlinuxarm/archlinux-hf-2012-09-18/archlinux-hf-2012-09-18.zip&#41;</code></pre>	<ol><li>At this time, not all mirrors have the updated rootfs. If you get a 404, please try a different mirror.</li></ol>	<ol><li>Extract the zip file to your hard drive, giving you the dd image archlinux-hf-2012-09-18.img</li></ol>	<ol><li>Write this image to the target SD card. The SD card will need to be 2GB or larger.</li></ol>	<pre><code>&#42; &#42;&#42;Linux&#42;&#42;</code></pre>Replacing sdX with the location of the SD card, run:dd bs=1M if=/path/to/archlinux-hf-2012-09-18.img of=/dev/sdX	<pre><code>&#42; &#42;&#42;Windows&#42;&#42;</code></pre>Download and install <a href='https://launchpad.net/win32-image-writer'>Win32DiskImager</a>Select the archlinux-hf-2012-09-18.img image file, select your SD card drive letter, and click Write	<ol><li>Eject the card from your computer, insert into the Raspberry Pi, and power it on.</li></ol>	<ol><li>If your keyboard, mouse, or other USB device doesn't appear to be working properly, try using it through a POWERED USB hub. The Raspberry Pi's USB ports are limited to 140mA.</li></ol><p><strong>Please note: The rootfs for the Raspberry Pi has been converted to systemd. There is no more /etc/rc.d or /etc/rc.conf. Please read up on <a href='https://wiki.archlinux.org/index.php/Systemd'>systemd</a>.</strong></p><h2><a name="summary"></a>Summary</h2><p>Please keep in mind that Arch is not designed for beginners and it will definitely help a lot if you have some Linux experience, and a great deal of patience. The advantage that it does have is that it is very light on resources, and comes with a very basic install. This means just a terminal interface and a limited number of programs. This is comes in handy when you want to configure your Pi for a specific purpose.</p><p>Once you've installed Arch and looked around take a look at this <a href='http://www.rpiforum.net/forum/tutorials/article/7-full-guide-to-arch-linux-on-the-raspberry-pi/'>Article</a> for some more important steps to get the most out of your Arch Linux Raspberry Pi.</p>
+</div>
+
+<div id="post-tags">
+    <b>Tags: </b>
+    
+    <a href="/tags/Terminal.html">Terminal</a>
+    
+    <a href="/tags/Raspberry Pi.html">Raspberry Pi</a>
+    
+    <a href="/tags/Linux.html">Linux</a>
+    
+</div>
+
+
+    <div id="prev-next">
+        
+        <a href="/how-to-fix-the-truecrypt-is-already-running-error-in-linux">&laquo; How to fix the &quot;TrueCrypt is already running&quot; error in Linux</a>
+        
+        
+        <a class="right" href="/blocking-ssh-brute-force-attacks-in-mikrotik-routeros">Blocking SSH Brute Force Attacks in MikroTik RouterOS &raquo;</a>
+        
+    </div>
+
+    
+
+
+</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="sidebar">
+                
+                <div id="recent">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        
+                        <li><a href="/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox">Migrating to a larger hardisk with CloneZilla and VirtualBox</a></li>
+                        
+                        <li><a href="/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange">HTML5 Mobile Site for Cavirtex.com Bitcoin exchange</a></li>
+                        
+                        <li><a href="/moving-from-wordpress-to-octopress">Moving from WordPress to OctoPress</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <div id="tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        
+                        <li><a href="/tags/Javascript.html">Javascript</a></li>
+                        
+                        <li><a href="/tags/TrueCrypt.html">TrueCrypt</a></li>
+                        
+                        <li><a href="/tags/Terminal.html">Terminal</a></li>
+                        
+                        <li><a href="/tags/Raspberry Pi.html">Raspberry Pi</a></li>
+                        
+                        <li><a href="/tags/MennoSites.ca.html">MennoSites.ca</a></li>
+                        
+                        <li><a href="/tags/WordPress.html">WordPress</a></li>
+                        
+                        <li><a href="/tags/Trickle.html">Trickle</a></li>
+                        
+                        <li><a href="/tags/apt-get.html">apt-get</a></li>
+                        
+                        <li><a href="/tags/Themes.html">Themes</a></li>
+                        
+                        <li><a href="/tags/Mikrotik.html">Mikrotik</a></li>
+                        
+                        <li><a href="/tags/StudioPress.html">StudioPress</a></li>
+                        
+                        <li><a href="/tags/Markdown.html">Markdown</a></li>
+                        
+                        <li><a href="/tags/MultiSite.html">MultiSite</a></li>
+                        
+                        <li><a href="/tags/VMware.html">VMware</a></li>
+                        
+                        <li><a href="/tags/Octopress.html">Octopress</a></li>
+                        
+                        <li><a href="/tags/Bitcoin.html">Bitcoin</a></li>
+                        
+                        <li><a href="/tags/VirtualBox.html">VirtualBox</a></li>
+                        
+                        <li><a href="/tags/Linux.html">Linux</a></li>
+                        
+                        <li><a href="/tags/Networking.html">Networking</a></li>
+                        
+                        <li><a href="/tags/Footer.html">Footer</a></li>
+                        
+                        <li><a href="/tags/Cavirtex.html">Cavirtex</a></li>
+                        
+                        <li><a href="/tags/Rsync.html">Rsync</a></li>
+                        
+                        <li><a href="/tags/Ubuntu.html">Ubuntu</a></li>
+                        
+                        <li><a href="/tags/CloneZilla.html">CloneZilla</a></li>
+                        
+                        <li><a href="/tags/Vim.html">Vim</a></li>
+                        
+                        <li><a href="/tags/Gedit.html">Gedit</a></li>
+                        
+                        <li><a href="/tags/Genesis.html">Genesis</a></li>
+                        
+                        <li><a href="/tags/SSH.html">SSH</a></li>
+                        
+                        <li><a href="/tags/RouterOS.html">RouterOS</a></li>
+                        
+                        <li><a href="/tags/Firewall.html">Firewall</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>Copyright &copy;  Matthew Siemens
+        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

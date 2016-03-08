@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Matthew Siemens - Personal Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+    <link rel="stylesheet" href="/css/screen.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Matthew Siemens - Personal Blog</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li  class="active" ><a href="/">Home</a></li>
+                <li
+                ><a href="/archives/">Archives</a></li>
+                
+                <li
+                >
+                <a href="/about">About</a>
+                </li>
+                
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div id="content">
+                
+<div id="post">
+    
+    <div class="post-header">
+        <h2>Migrating to a larger hardisk with CloneZilla and VirtualBox</h2>
+        <div id="post-meta">
+            
+            <div class="date">April 7, 2014</div>
+        </div>
+    </div>
+    <p>I run <a href="https://www.archlinux.org/" shape="rect">Arch Linux</a> as my primary operating system but use <a href="https://www.virtualbox.org/" shape="rect">VirtualBox</a> to run various Windows systems for developing software and accessing Windows only programs. I recently started running out of space on the hard disk for one of my virtual machines. I was quickly able to use one of my favourite Linux Boot Disks <a href="http://clonezilla.org/" shape="rect">CloneZilla</a> to copy my existing virtual hard disk to a new, larger virtual hard disk. This process was done using virtual disks, but the steps are exactly the same when using physical disks.</p><p></p>
+    <a href="/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox">Continue reading &#8594;</a>
+    <hr>
+    
+    <div class="post-header">
+        <h2>HTML5 Mobile Site for Cavirtex.com Bitcoin exchange</h2>
+        <div id="post-meta">
+            
+            <div class="date">February 9, 2014</div>
+        </div>
+    </div>
+    <p>I got into the whole Bitcoin craze a little over a year ago. I've used <a href="http://cavirtex.com/" shape="rect">Cavirtex</a> ever since to exchange Bitcoins for Canadian dollars. Bitcoin is very volatile right now and the prices can flucuate wildly. I found myself continually trying to check current prices on my mobile devices but the Cavirtex site is not responsive and is a real pain to use when you aren't on a full size monitor.</p><p>So I built a small Ember.js application that pulls current trade information from Cavirtex and displays it in a nice responsive layout. Check it out and let me know what you think! </p>
+    <a href="/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange">Continue reading &#8594;</a>
+    <hr>
+    
+    <div class="post-header">
+        <h2>Moving from WordPress to OctoPress</h2>
+        <div id="post-meta">
+            
+            <div class="date">January 28, 2014</div>
+        </div>
+    </div>
+    <p>A few months ago I decided to move my personal site and blog from a WordPress platform to <a href="http://Octopress.org/" shape="rect">Octopress</a> framework.</p><p>OctoPress is a blogging framework based on <a href="https://github.com/jekyll/jekyll" shape="rect">Jekyll</a> that generates static files and can be managed completely from the command line.</p>
+    <a href="/moving-from-wordpress-to-octopress">Continue reading &#8594;</a>
+    <hr>
+    
+    <div class="post-header">
+        <h2>Use SSH-keygen to remove a hostname from known_hosts</h2>
+        <div id="post-meta">
+            
+            <div class="date">August 26, 2013</div>
+        </div>
+    </div>
+    <p>If you use SSH on a regular basis I'm sure you've received the warning that the "REMOTE HOST IDENTIFICATION HAS CHANGED". This occurs any time the SSH key for the host you are trying to connect to does not match the key saved in your known<i>hosts file (The known</i>hosts file is in the .ssh directory within your home directory by default). </p><p></p>
+    <a href="/use-ssh-keygen-to-remove-a-hostname-from-known_hosts">Continue reading &#8594;</a>
+    <hr>
+    
+    <div class="post-header">
+        <h2>How to fix the &quot;TrueCrypt is already running&quot; error in Linux</h2>
+        <div id="post-meta">
+            
+            <div class="date">August 25, 2013</div>
+        </div>
+    </div>
+    <p>I recently ran across an error where <a href="http://www.truecrypt.org/" shape="rect">TrueCrypt</a> wouldn't start on my computer running Arch Linux. When I tried to run TrueCrypt graphically nothing would happen, but when ran from the terminal I received a message telling me that <strong>"TrueCrypt is already running"</strong>. This error is caused when your last TrueCrypt session didn't close cleanly and left a lock file behind in your home directory. </p><p>To remove the lock file just run (Replace YOURUSERNAME with the username for your actual account): <code>rm ~/.TrueCrypt-lock-YOURUSERNAME</code></p>
+    <a href="/how-to-fix-the-truecrypt-is-already-running-error-in-linux">Continue reading &#8594;</a>
+    <hr>
+    
+
+    <div id="prev-next">
+        
+        
+        <a class="right" href="/p/2">Next &raquo;</a>
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="sidebar">
+                
+                <div id="recent">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        
+                        <li><a href="/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox">Migrating to a larger hardisk with CloneZilla and VirtualBox</a></li>
+                        
+                        <li><a href="/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange">HTML5 Mobile Site for Cavirtex.com Bitcoin exchange</a></li>
+                        
+                        <li><a href="/moving-from-wordpress-to-octopress">Moving from WordPress to OctoPress</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <div id="tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        
+                        <li><a href="/tags/Javascript.html">Javascript</a></li>
+                        
+                        <li><a href="/tags/TrueCrypt.html">TrueCrypt</a></li>
+                        
+                        <li><a href="/tags/Terminal.html">Terminal</a></li>
+                        
+                        <li><a href="/tags/Raspberry Pi.html">Raspberry Pi</a></li>
+                        
+                        <li><a href="/tags/MennoSites.ca.html">MennoSites.ca</a></li>
+                        
+                        <li><a href="/tags/WordPress.html">WordPress</a></li>
+                        
+                        <li><a href="/tags/Trickle.html">Trickle</a></li>
+                        
+                        <li><a href="/tags/apt-get.html">apt-get</a></li>
+                        
+                        <li><a href="/tags/Themes.html">Themes</a></li>
+                        
+                        <li><a href="/tags/Mikrotik.html">Mikrotik</a></li>
+                        
+                        <li><a href="/tags/StudioPress.html">StudioPress</a></li>
+                        
+                        <li><a href="/tags/Markdown.html">Markdown</a></li>
+                        
+                        <li><a href="/tags/MultiSite.html">MultiSite</a></li>
+                        
+                        <li><a href="/tags/VMware.html">VMware</a></li>
+                        
+                        <li><a href="/tags/Octopress.html">Octopress</a></li>
+                        
+                        <li><a href="/tags/Bitcoin.html">Bitcoin</a></li>
+                        
+                        <li><a href="/tags/VirtualBox.html">VirtualBox</a></li>
+                        
+                        <li><a href="/tags/Linux.html">Linux</a></li>
+                        
+                        <li><a href="/tags/Networking.html">Networking</a></li>
+                        
+                        <li><a href="/tags/Footer.html">Footer</a></li>
+                        
+                        <li><a href="/tags/Cavirtex.html">Cavirtex</a></li>
+                        
+                        <li><a href="/tags/Rsync.html">Rsync</a></li>
+                        
+                        <li><a href="/tags/Ubuntu.html">Ubuntu</a></li>
+                        
+                        <li><a href="/tags/CloneZilla.html">CloneZilla</a></li>
+                        
+                        <li><a href="/tags/Vim.html">Vim</a></li>
+                        
+                        <li><a href="/tags/Gedit.html">Gedit</a></li>
+                        
+                        <li><a href="/tags/Genesis.html">Genesis</a></li>
+                        
+                        <li><a href="/tags/SSH.html">SSH</a></li>
+                        
+                        <li><a href="/tags/RouterOS.html">RouterOS</a></li>
+                        
+                        <li><a href="/tags/Firewall.html">Firewall</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>Copyright &copy;  Matthew Siemens
+        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

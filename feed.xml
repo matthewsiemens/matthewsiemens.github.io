@@ -1,0 +1,404 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
+<channel>
+<atom:link href='http://matthewsiemens.com' rel='self' type='application/rss+xml'/>
+<title>
+Matthew Siemens - Personal Blog
+</title>
+<link>
+http://matthewsiemens.com
+</link>
+<description>
+This blog is awesome
+</description>
+<lastBuildDate>
+Mon, 07 Mar 2016 19:58:00 -0600
+</lastBuildDate>
+<generator>
+clj-rss
+</generator>
+<item>
+<guid>
+http://matthewsiemens.com/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox
+</guid>
+<link>
+http://matthewsiemens.com/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox
+</link>
+<title>
+Migrating to a larger hardisk with CloneZilla and VirtualBox
+</title>
+<description>
+&lt;p&gt;I run &lt;a href='https://www.archlinux.org/'&gt;Arch Linux&lt;/a&gt; as my primary operating system but use &lt;a href='https://www.virtualbox.org/'&gt;VirtualBox&lt;/a&gt; to run various Windows systems for developing software and accessing Windows only programs. I recently started running out of space on the hard disk for one of my virtual machines. I was quickly able to use one of my favourite Linux Boot Disks &lt;a href='http://clonezilla.org/'&gt;CloneZilla&lt;/a&gt; to copy my existing virtual hard disk to a new, larger virtual hard disk. This process was done using virtual disks, but the steps are exactly the same when using physical disks.&lt;/p&gt;&lt;p&gt;&lt;!&amp;ndash; more &amp;ndash;&gt;&lt;/p&gt;&lt;h2&gt;Steps to migrate to new hard disk&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Note: It is possible to permanently lose your data from running the commands below, be careful!&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Download the CloneZilla &lt;a href='http://clonezilla.org/downloads/download.php?branch=stable'&gt;live CD&lt;/a&gt;&lt;ul&gt;&lt;li&gt;In most cases you want to download the &lt;strong&gt;i486&lt;/strong&gt; infrastructure in the &lt;strong&gt;.iso&lt;/strong&gt; format&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Ensure the virtual machine is shut off&lt;/li&gt;&lt;li&gt;Add a new virtual hard disk to your virtual machine&lt;ul&gt;&lt;li&gt;Click on the machine in the VirtualBox Manager&lt;/li&gt;&lt;li&gt;Click on the Settings button at the top (Yellow Gear Icon)&lt;/li&gt;&lt;li&gt;Click on the Storage label&lt;/li&gt;&lt;li&gt;Click on the far right disk label that is in the row beside &quot;Controller: SATA&quot;&lt;/li&gt;&lt;li&gt;Create a new disk of whatever size you want., &lt;strong&gt;It must be bigger or at least the same size as your current disk&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Mount the CloneZilla iso&lt;ul&gt;&lt;li&gt;Click the CD/DVD drive in your Storage settings and at the far right click on the small CD image.&lt;/li&gt;&lt;li&gt;Click &lt;em&gt;Choose a virtual CD/DVD image file&lt;/em&gt; from the dropdown menu&lt;/li&gt;&lt;li&gt;Navigate and click on the CloneZilla iso file you downloaded&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Start the virtual machine&lt;/li&gt;&lt;li&gt;Select first option in the Grub boot menu (Default settings)&lt;/li&gt;&lt;li&gt;Select your language&lt;/li&gt;&lt;li&gt;Select &lt;strong&gt;Don't touch keymap&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Select &lt;strong&gt;Start_Clonezilla&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Select &lt;strong&gt;device-device&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Select &lt;strong&gt;Beginner&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Select &lt;strong&gt;disk&lt;i&gt;to&lt;/i&gt;local_disk&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Select the original disk&lt;/li&gt;&lt;li&gt;Select the new disk&lt;/li&gt;&lt;li&gt;Select &lt;strong&gt;Skip checking/repairing source file system&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Press 'Enter' and press y to go through the confirmation messages&lt;/li&gt;&lt;li&gt;When CloneZilla is finished copying it will display a message prompting you to press &quot;Enter&quot;&lt;ul&gt;&lt;li&gt;Press &lt;em&gt;Enter&lt;/em&gt;&lt;/li&gt;&lt;li&gt;Select &lt;em&gt;Poweroff&lt;/em&gt;&lt;/li&gt;&lt;li&gt;Press &lt;em&gt;Enter&lt;/em&gt; again when prompted&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;The CloneZilla disk should have automatically been dismounted but if not umount it from the Storage section in Settings&lt;/li&gt;&lt;li&gt;Remove the original disk from the Storage section in Settings&lt;ul&gt;&lt;li&gt;Set the new disk to use the same SATA Port number that the original disk was using under the attributes section on the right.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;You will have to format the new storage space for Windows or any other operating system to actually use the new space&lt;/li&gt;&lt;li&gt;Optionally once you have tested that the new drive is working, delete the old drive from your system.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;This is just one of the many uses of Clonezilla. It is an amazingly powerful tool for dealing with disks, partitions, and images.&lt;/p&gt;&lt;p&gt;Post how you use Clonezilla in the comments!&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Mon, 07 Apr 2014 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange
+</guid>
+<link>
+http://matthewsiemens.com/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange
+</link>
+<title>
+HTML5 Mobile Site for Cavirtex.com Bitcoin exchange
+</title>
+<description>
+&lt;p&gt;I got into the whole Bitcoin craze a little over a year ago. I've used &lt;a href='http://cavirtex.com/'&gt;Cavirtex&lt;/a&gt; ever since to exchange Bitcoins for Canadian dollars. Bitcoin is very volatile right now and the prices can flucuate wildly. I found myself continually trying to check current prices on my mobile devices but the Cavirtex site is not responsive and is a real pain to use when you aren't on a full size monitor.&lt;/p&gt;&lt;p&gt;So I built a small Ember.js application that pulls current trade information from Cavirtex and displays it in a nice responsive layout. Check it out and let me know what you think! &lt;/p&gt;&lt;p&gt;My Cavirtex Mobile Site: &lt;a href='http://virtex.matthewsiemens.com'&gt;virtex.matthewsiemens.com&lt;/a&gt;&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Sun, 09 Feb 2014 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/moving-from-wordpress-to-octopress
+</guid>
+<link>
+http://matthewsiemens.com/moving-from-wordpress-to-octopress
+</link>
+<title>
+Moving from WordPress to OctoPress
+</title>
+<description>
+&lt;p&gt;A few months ago I decided to move my personal site and blog from a WordPress platform to &lt;a href='http://Octopress.org/'&gt;Octopress&lt;/a&gt; framework.&lt;/p&gt;&lt;p&gt;OctoPress is a blogging framework based on &lt;a href='https://github.com/jekyll/jekyll'&gt;Jekyll&lt;/a&gt; that generates static files and can be managed completely from the command line.&lt;/p&gt;&lt;p&gt;I made the switch for a number of reasons: &lt;!&amp;ndash; more &amp;ndash;&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;A full WordPress site was overkill for the simple site/blog setup I was using it for.&lt;/li&gt;&lt;li&gt;I've started using &lt;a href='http://daringfireball.net/projects/markdown/'&gt;MarkDown&lt;/a&gt; for most of my writing and the idea of being able to write my blog posts using it was appealing.&lt;/li&gt;&lt;li&gt;I've always enjoyed working from the command line whenever I could and with Octopress I can manage the entire site with &lt;a href='http://www.vim.org/'&gt;VIM&lt;/a&gt; and the command line.&lt;/li&gt;&lt;li&gt;Since Octopress generates static html it loads fast, has far fewer security issues, and can be hosted on just about anything. In fact this site is being hosted on &lt;a href='http://pages.github.com/'&gt;GitHub Pages&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;I was just curious about Octopress after hearing it mentioned over the last few years and this seems like as good a time as any to give it a try.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;I haven't spent much time exploring all of the possibilities with Octopress but so far I've been impressed with how easy everything is to use and configure.&lt;/p&gt;&lt;p&gt;I still use &lt;a href='http://wordpress.org/'&gt;WordPress&lt;/a&gt; for most of the sites that I manage but I think Octopress can be a very powerfull/usefull alternative in certain situations.&lt;/p&gt;&lt;p&gt;Check out this great &lt;a href='http://webdesign.tutsplus.com/tutorials/applications/getting-started-with-Octopress/'&gt;tutorial&lt;/a&gt; on how to setup Octopress.&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Tue, 28 Jan 2014 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/use-ssh-keygen-to-remove-a-hostname-from-known_hosts
+</guid>
+<link>
+http://matthewsiemens.com/use-ssh-keygen-to-remove-a-hostname-from-known_hosts
+</link>
+<title>
+Use SSH-keygen to remove a hostname from known_hosts
+</title>
+<description>
+&lt;p&gt;If you use SSH on a regular basis I'm sure you've received the warning that the &quot;REMOTE HOST IDENTIFICATION HAS CHANGED&quot;. This occurs any time the SSH key for the host you are trying to connect to does not match the key saved in your known&lt;i&gt;hosts file (The known&lt;/i&gt;hosts file is in the .ssh directory within your home directory by default). &lt;/p&gt;&lt;p&gt;&lt;!&amp;ndash; more &amp;ndash;&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Please note&lt;/strong&gt; that this is a warning that should be taken seriously because it could indicate that your connect to your SSH server is compromised. Often though I recieve this warning after I have regenerated an SSH key or reinstall the operating system.&lt;/p&gt;&lt;p&gt;If you are sure that nothing malicious has happened to your connection it is a simple enough task to open the known_hosts file in whatever text editor you prefer and remove the offending key. I've always found this process rather clunky and as it turns out there is a much easier way to remove the offending key using ssh-keygen.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;To remove the key just use:&lt;/strong&gt; &lt;code&gt;ssh-keygen -R OFFENDINGHOST&lt;/code&gt; &lt;i&gt;(replace OFFENDINGHOST with the IP address or domain name of the host in question):&lt;/i&gt;&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Mon, 26 Aug 2013 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/how-to-fix-the-truecrypt-is-already-running-error-in-linux
+</guid>
+<link>
+http://matthewsiemens.com/how-to-fix-the-truecrypt-is-already-running-error-in-linux
+</link>
+<title>
+How to fix the &quot;TrueCrypt is already running&quot; error in Linux
+</title>
+<description>
+&lt;p&gt;I recently ran across an error where &lt;a href='http://www.truecrypt.org/'&gt;TrueCrypt&lt;/a&gt; wouldn't start on my computer running Arch Linux. When I tried to run TrueCrypt graphically nothing would happen, but when ran from the terminal I received a message telling me that &lt;strong&gt;&quot;TrueCrypt is already running&quot;&lt;/strong&gt;. This error is caused when your last TrueCrypt session didn't close cleanly and left a lock file behind in your home directory. &lt;/p&gt;&lt;p&gt;To remove the lock file just run (Replace YOURUSERNAME with the username for your actual account): &lt;code&gt;rm &amp;#126;/.TrueCrypt-lock-YOURUSERNAME&lt;/code&gt;&lt;/p&gt;&lt;p&gt;You can also navigate to your home directory using a file manager and deleting the file graphically. If the file is hidden, you can show it by pressing Ctrl+H in your file manager.&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Sun, 25 Aug 2013 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/installing-arch-linux-on-the-raspberry-pi
+</guid>
+<link>
+http://matthewsiemens.com/installing-arch-linux-on-the-raspberry-pi
+</link>
+<title>
+Installing Arch Linux on the Raspberry Pi
+</title>
+<description>
+&lt;p&gt;My brand-new &lt;a href='http://raspberrypi.org/'&gt;Raspberry Pi&lt;/a&gt; was delivered last night. I finally got a chance to start playing with it this evening.  The first thing I wanted to do was get my favourite Linux distribution Arch installed.&lt;/p&gt;&lt;h2&gt;&lt;a name=&quot;here's&amp;#95;a&amp;#95;quick&amp;#95;and&amp;#95;easy&amp;#95;way&amp;#95;to&amp;#95;get&amp;#95;&lt;a href='http://archlinuxarm.org/'&gt;Arch Linux ARM&lt;/a&gt;&amp;#95;installed&amp;#95;onto&amp;#95;the&amp;#95;raspberry&amp;#95;pi.&quot;&gt;&lt;/a&gt;Here's a quick and easy way to get &lt;a href='http://archlinuxarm.org/'&gt;Arch Linux ARM&lt;/a&gt; installed onto the Raspberry Pi.&lt;/h2&gt;&lt;p&gt;&lt;i&gt;These instructions are taken directly from &lt;a href='http://archlinuxarm.org/platforms/armv6/raspberry-pi'&gt;http://archlinuxarm.org/&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;	&lt;ol&gt;&lt;li&gt;Download the zip file containing the dd image from one of these resources:&lt;/li&gt;&lt;/ol&gt;	&lt;pre&gt;&lt;code&gt;&amp;#42; &amp;#91;Torrent&amp;#93;&amp;#40;http://downloads.raspberrypi.org/images/archlinuxarm/archlinux-hf-2012-09-18/archlinux-hf-2012-09-18.zip.torrent&amp;#41;&lt;/code&gt;&lt;/pre&gt;	&lt;pre&gt;&lt;code&gt;&amp;#42; &amp;#91;Direct Download&amp;#93;&amp;#40;http://downloads.raspberrypi.org/images/archlinuxarm/archlinux-hf-2012-09-18/archlinux-hf-2012-09-18.zip&amp;#41;&lt;/code&gt;&lt;/pre&gt;	&lt;ol&gt;&lt;li&gt;At this time, not all mirrors have the updated rootfs. If you get a 404, please try a different mirror.&lt;/li&gt;&lt;/ol&gt;	&lt;ol&gt;&lt;li&gt;Extract the zip file to your hard drive, giving you the dd image archlinux-hf-2012-09-18.img&lt;/li&gt;&lt;/ol&gt;	&lt;ol&gt;&lt;li&gt;Write this image to the target SD card. The SD card will need to be 2GB or larger.&lt;/li&gt;&lt;/ol&gt;	&lt;pre&gt;&lt;code&gt;&amp;#42; &amp;#42;&amp;#42;Linux&amp;#42;&amp;#42;&lt;/code&gt;&lt;/pre&gt;Replacing sdX with the location of the SD card, run:dd bs=1M if=/path/to/archlinux-hf-2012-09-18.img of=/dev/sdX	&lt;pre&gt;&lt;code&gt;&amp;#42; &amp;#42;&amp;#42;Windows&amp;#42;&amp;#42;&lt;/code&gt;&lt;/pre&gt;Download and install &lt;a href='https://launchpad.net/win32-image-writer'&gt;Win32DiskImager&lt;/a&gt;Select the archlinux-hf-2012-09-18.img image file, select your SD card drive letter, and click Write	&lt;ol&gt;&lt;li&gt;Eject the card from your computer, insert into the Raspberry Pi, and power it on.&lt;/li&gt;&lt;/ol&gt;	&lt;ol&gt;&lt;li&gt;If your keyboard, mouse, or other USB device doesn't appear to be working properly, try using it through a POWERED USB hub. The Raspberry Pi's USB ports are limited to 140mA.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Please note: The rootfs for the Raspberry Pi has been converted to systemd. There is no more /etc/rc.d or /etc/rc.conf. Please read up on &lt;a href='https://wiki.archlinux.org/index.php/Systemd'&gt;systemd&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;&lt;h2&gt;&lt;a name=&quot;summary&quot;&gt;&lt;/a&gt;Summary&lt;/h2&gt;&lt;p&gt;Please keep in mind that Arch is not designed for beginners and it will definitely help a lot if you have some Linux experience, and a great deal of patience. The advantage that it does have is that it is very light on resources, and comes with a very basic install. This means just a terminal interface and a limited number of programs. This is comes in handy when you want to configure your Pi for a specific purpose.&lt;/p&gt;&lt;p&gt;Once you've installed Arch and looked around take a look at this &lt;a href='http://www.rpiforum.net/forum/tutorials/article/7-full-guide-to-arch-linux-on-the-raspberry-pi/'&gt;Article&lt;/a&gt; for some more important steps to get the most out of your Arch Linux Raspberry Pi.&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Sun, 02 Dec 2012 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/blocking-ssh-brute-force-attacks-in-mikrotik-routeros
+</guid>
+<link>
+http://matthewsiemens.com/blocking-ssh-brute-force-attacks-in-mikrotik-routeros
+</link>
+<title>
+Blocking SSH Brute Force Attacks in MikroTik RouterOS
+</title>
+<description>
+&lt;p&gt;&lt;a href='http://www.mikrotik.com/'&gt;Mikrotik&lt;/a&gt; makes some great networking equipment for both business, and home uses.  I've used Mikrotik routers both while consulting and for my own personal and business use.  I use SSH to manage my Mikrotik devices and wanted to be able to detect and block any Brute Force SSH login attempts.  Here is a quick and easy way to do exactly that:&lt;/p&gt;&lt;h4&gt;&lt;a name=&quot;first&amp;#95;things&amp;#95;first&quot;&gt;&lt;/a&gt;First Things First&lt;/h4&gt;&lt;p&gt;If you haven't done this already, try changing the port SSH is running on to something other than the default.  When logged in through SSH or Telnet you can edit the SSH port with:&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;/ip service edit ssh value-name=port
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After changing the port to something other than 22 hit Ctrl+o to save your change.&lt;/p&gt;&lt;h4&gt;&lt;a name=&quot;using&amp;#95;firewall&amp;#95;filters&quot;&gt;&lt;/a&gt;Using Firewall Filters&lt;/h4&gt;&lt;p&gt;Firewall rules are read from the top down, meaning if a connection matches a rule it won't look any further.  This is why the following rules seem like they are backwards.&lt;/p&gt;&lt;p&gt;Navigate to: &lt;strong&gt;/ip firewall filter&lt;/strong&gt; &lt;i&gt;If you are using a non-standard SSH port, change 22 in the examples below to whatever port you are using.&lt;/i&gt;&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;add chain=input \
+protocol=tcp \
+dst-port=22 \
+src-address-list=ssh&amp;#95;blacklist \
+action=drop \
+comment=&amp;quot;Drop SSH connection from IP addresses in ssh&amp;#95;blacklist address list&amp;quot; \
+disabled=no
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;i&gt;This rule will drop any SSH connections that come from IP addresses in the &lt;strong&gt;&quot;ssh&lt;/i&gt;blacklist&quot;&lt;/strong&gt; address list._&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;add chain=input \
+protocol=tcp \
+dst-port=22 \
+connection-state=new \
+src-address-list=ssh&amp;#95;attempt&amp;#95;3 \
+action=add-src-to-address-list \
+address-list=ssh&amp;#95;blacklist \
+address-list-timeout=2w \
+comment=&amp;quot;Blocked IP address that attempted multiple SSH connections&amp;quot; \
+disabled=no
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;i&gt;This rule will add any IP address that attempts 4 SSH connections (either successfully or not) within the set time limit to the &lt;strong&gt;&quot;ssh&lt;/i&gt;blacklist&quot;&lt;/strong&gt; address list._&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;add chain=input \
+protocol=tcp \
+dst-port=22 \
+connection-state=new \
+src-address-list=ssh&amp;#95;attempt&amp;#95;2 \
+action=add-src-to-address-list \
+address-list=ssh&amp;#95;attempt&amp;#95;3 \
+address-list-timeout=1m \
+comment=&amp;quot;IP address that attempted to create 3 SSH connections&amp;quot; \
+disabled=no
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;i&gt;This rule will add any IP address that attempts 3 SSH connections (either successfully or not) within the set time limit to the &lt;strong&gt;&quot;ssh&lt;/i&gt;attempt&lt;i&gt;3&quot;&lt;/strong&gt; address list.&lt;/i&gt;&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;add chain=input \
+protocol=tcp \
+dst-port=22 \
+connection-state=new \
+src-address-list=ssh&amp;#95;attempt&amp;#95;1 \
+action=add-src-to-address-list \
+address-list=ssh&amp;#95;attempt&amp;#95;2 \
+address-list-timeout=1m \
+comment=&amp;quot;IP address that attempted to create 2 SSH connections&amp;quot; \
+disabled=no
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;i&gt;This rule will add any IP address that attempts 2 SSH connections (either successfully or not) within the set time limit to the &lt;strong&gt;&quot;ssh&lt;/i&gt;attempt&lt;i&gt;2&quot;&lt;/strong&gt; address list.&lt;/i&gt;&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;add chain=input \
+protocol=tcp \
+dst-port=22 \
+connection-state=new \
+action=add-src-to-address-list \
+address-list=ssh&amp;#95;attempt&amp;#95;1 \
+address-list-timeout=1m \
+comment=&amp;quot;IP address that attempted to create an SSH connections&amp;quot; \
+disabled=no
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;i&gt;This rule will add any IP address that attempts an SSH connection (either successfully or not) within the set time limit to the &lt;strong&gt;&quot;ssh&lt;/i&gt;attempt&lt;i&gt;1&quot;&lt;/strong&gt; address list.&lt;/i&gt;&lt;/p&gt;&lt;h4&gt;&lt;a name=&quot;summary&amp;#95;-&amp;#95;what&amp;#95;does&amp;#95;it&amp;#95;do?&quot;&gt;&lt;/a&gt;Summary - What does it do?&lt;/h4&gt;&lt;p&gt;What these five Firewall Filter rules do is detect everytime someone tries to connect to the Mikrotik SSH server (it doesn't matter if they succed in logging in or not).&lt;br /&gt;&lt;/p&gt;&lt;p&gt;  1.  The first time an attempt to login occurs the IP address where the attempt comes from is added to the &lt;strong&gt;&quot;ssh&lt;i&gt;attempt&lt;/i&gt;1&quot;&lt;/strong&gt; address list for 1 minute.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;  2.  If a second attempt to login to SSH occurs from the same IP address while it is still in &lt;strong&gt;&quot;ssh&lt;i&gt;attempt&lt;/i&gt;1&quot;&lt;/strong&gt; than the IP address will be added to the &lt;strong&gt;&quot;ssh&lt;i&gt;attempt&lt;/i&gt;2&quot;&lt;/strong&gt; address list for 1 minute.&lt;/p&gt;&lt;p&gt;  3.  If a third attempt to login to SSH occurs from the same IP address while it is still in &lt;strong&gt;&quot;ssh&lt;i&gt;attempt&lt;/i&gt;2&quot;&lt;/strong&gt; than the IP address will be added to the &lt;strong&gt;&quot;ssh&lt;i&gt;attempt&lt;/i&gt;3&quot;&lt;/strong&gt; address list for 1 minute.&lt;/p&gt;&lt;p&gt;  4.  If a fourth attempt to login to SSH occurs from the same IP address while it is still in &lt;strong&gt;&quot;ssh&lt;i&gt;attempt&lt;/i&gt;3&quot;&lt;/strong&gt; than the IP address will be added to the &lt;strong&gt;&quot;ssh_blacklist&quot;&lt;/strong&gt; address list and all further attempts will be blocked for the next 2 weeks by the first filter rule we added.&lt;/p&gt;&lt;p&gt;You can modify the &lt;i&gt;address=list-timeout&lt;/i&gt; value to change the amount of time that IP addresses stay in each address list to suit your specific needs.&lt;/p&gt;&lt;p&gt;&lt;i&gt;Inspiration for this post came from &lt;a href='http://wiki.mikrotik.com/wiki/Bruteforce_login_prevention_%28FTP'&gt;this&lt;/a&gt; Mikrotik Wiki article&lt;/i&gt;&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Sun, 14 Oct 2012 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/running-vmware-player-virtual-machine-from-the-terminal
+</guid>
+<link>
+http://matthewsiemens.com/running-vmware-player-virtual-machine-from-the-terminal
+</link>
+<title>
+Running VMware Player virtual machine from the terminal
+</title>
+<description>
+&lt;p&gt;Recently I was setting up a Ubuntu server in VMware Player for testing purposes. As I was setting it up, I started to wonder if it would be possible to start the Virtual Machine from the terminal. This way I would be able to start it over SSH if I wasn't in my office. After some quick looking I found a quick and easy way to accomplish this with &lt;a href='http://en.wikipedia.org/wiki/Xvfb'&gt;Xfvb&lt;/a&gt;.&lt;/p&gt;&lt;h4&gt;&lt;a name=&quot;install&amp;#95;xfvb&quot;&gt;&lt;/a&gt;Install Xfvb&lt;/h4&gt;&lt;p&gt;The steps to install Xfvb will depend on what distribution you are running. In &lt;a href='http://www.archlinux.org/'&gt;Arch Linux&lt;/a&gt; it is as simple as running:&lt;/p&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;$ sudo pacman -S xvfb-xorg&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;&lt;a name=&quot;run&amp;#95;virtual&amp;#95;machine&amp;#95;from&amp;#95;terminal&quot;&gt;&lt;/a&gt;Run Virtual Machine from Terminal&lt;/h4&gt;&lt;p&gt;Once you've installed Xfvb you can start the Virtual Machine from the terminal using:&lt;/p&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;$ xvfb-run vmplayer LOCATION&amp;#95;OF&amp;#95;VMX&amp;#95;FILE&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;&lt;a name=&quot;create&amp;#95;a&amp;#95;bash&amp;#95;script&amp;#95;to&amp;#95;simplify&amp;#95;the&amp;#95;process&quot;&gt;&lt;/a&gt;Create a Bash Script to Simplify the Process&lt;/h4&gt;&lt;p&gt;You can make this much simpler by making a simple bash script like this:&lt;/p&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;#!/bin/sh
+xvfb-run vmplayer 'LOCATION&amp;#95;OF&amp;#95;VMX&amp;#95;FILE'&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you put the bash script in your path you will be able to start the Virtual Machine from the terminal just by typing in the name of the bash script. I'm not able to start my Virtual Machines over SSH or even set them to start when my computer starts.&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Sat, 13 Oct 2012 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/using-trickle-to-control-bandwidth-use-in-any-program
+</guid>
+<link>
+http://matthewsiemens.com/using-trickle-to-control-bandwidth-use-in-any-program
+</link>
+<title>
+Using Trickle to Control Bandwidth Use in Any Program
+</title>
+<description>
+&lt;p&gt;There are a number of reasons why you would want to control how much bandwidth any given program is able to use. This can be done in a couple different ways, including options right with in the software, or through a software or hardware firewall. A great little program for managing bandwidth use is Trickle.  Trickle runs completely in userspace, which means we don't need to mess with a firewall, or even need root access.&lt;/p&gt;&lt;p&gt;If you're on Ubuntu/Debian you should be able to install Trickle using&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;sudo apt-get install trickle
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now that you've got Trickle installed just use it before any network command to limit its bandwidth.  Quite self-explanatory -u specifies upload and -d download.&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;trickle -u 25 -d 100 myCommand
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The reason I first started using Trickle was so I could use Rsync and SCP to copy/backup files on my computer without negatively affecting the speed of my Internet connection.  I have a fairly limited upload speed and this is an example of how I would limit the upload speed to 100 KB/s when backup up a folder with Rsync.  Please note that when using Trickle with Rsync you have to use the -e option.&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;trickle -a -e &amp;quot;trickle -u 100 ssh&amp;quot; myFiles matthew@example.com:/home/matthew/backups/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It is even easier using Trickle with SCP where all you would need to do is use:&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;trickle -u 100 scp myFile.zip matthew@example.com:/home/matthew/backups/
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Sun, 11 Mar 2012 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/simplifying-managing-your-ssh-connections-by-using-an-ssh-config-file
+</guid>
+<link>
+http://matthewsiemens.com/simplifying-managing-your-ssh-connections-by-using-an-ssh-config-file
+</link>
+<title>
+Simplifying Managing Your SSH Connections by Using an SSH Config File
+</title>
+<description>
+&lt;p&gt;I've been using Linux as my primary operating system for over five years, and spent a good deal of time with it before that time.  It's only been within the last year or so that I've really begun to explore and enjoy working from the Linux/Unix command line.  It's greatly simplified my work flow when it comes to many tasks, and it seems I spend the majority of my time either in a command line or web browser now a days.  Now that nearly 100% of the time when I'm working on a remote system, whether it is a server, Linux/Unix PC, or networking equipment, I'm usually connecting with &lt;a href='http://www.openssh.com'&gt;SSH.&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;SSH is an incredibly powerful tool that can be used for everything from remote terminal access, to running entire graphical programs over a network.  For me though remembering and having to type in all the IP Addresses, DNS Names, usernames and port numbers for all the SSH connections I use daily can be a real pain.  That's why setting up your own SSH config file can save huge amounts of time and effort in your day-to-day work.&lt;/p&gt;&lt;p&gt;This tutorial will be much easier to follow if you have a basic understanding of how to use SSH. The steps in this tutorial were performed on &lt;a href='http://www.ubuntu.com'&gt;Ubuntu 11.10.&lt;/a&gt;  You may need to modify some steps depending on what system you are running.&lt;/p&gt;&lt;h4&gt;&lt;a name=&quot;gui&amp;#95;version&quot;&gt;&lt;/a&gt;GUI Version&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;Open Gedit (or your editor of your choice)&lt;/li&gt;&lt;li&gt;Click File-&gt;SaveGo to your home folder, and display hidden files by hitting CTRL+H on your keyboard.Open the .ssh folder and save your new file as config&lt;/li&gt;&lt;/ol&gt;&lt;h4&gt;&lt;a name=&quot;command&amp;#95;line&amp;#95;version&quot;&gt;&lt;/a&gt;Command Line Version&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;First open up the terminal on your Linux/Unix based system.&lt;/li&gt;&lt;li&gt;Use vi (or any editor of your choice)&lt;/li&gt;&lt;/ol&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;vi &amp;#126;/.ssh/config
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;&lt;li&gt;There are many options that you can set in a config file, but we will go over the settings that I usually use.  Here's an example:&lt;/li&gt;&lt;/ol&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;Host myServer
+
+HostName example.com
+User root
+Port 222
+
+
+Host myDesktop
+
+Hostname 192.168.1.100
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This example shows two different SSH connections and their different options.  The first is an example server that we want to connect to at example.com, with the username root, and where the SSH service is running on the non-standard port 222.  The second is an example of a computer on your local network.  As you can see we used a local IP address instead of a DNS name, also we didn't bother setting a port number since it is running on the standard port 22.  Also because in this example I'm assuming your connecting from another computer you own at the location there is no username set since I'm assuming you are using the same username on both computers you're using for the connection.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Other options that I often use would be ServerAliveInterval, and ServerAliveCountMax.&lt;/li&gt;&lt;/ol&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;Host myServer
+
+HostName example.com
+User root
+Port 222
+ServerAliveInterval 30
+ServerAliveCountMax 120
+
+Host myDesktop
+
+Hostname 192.168.1.100
+ServerAliveInterval 30
+ServerAliveCountMax 120
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This example would keep your SSH connection live for an hour by refreshing the connection every 30 seconds.  This can be handy if you don't want to be logged out every time you step away from your keyboard.&lt;/p&gt;&lt;p&gt;With your new SSH Config file instead of having to type in:&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;ssh -p 222 root@example.com 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can just use:&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;ssh myServer
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hope this little trick saves you as much time as it has saved me.&lt;/p&gt;&lt;h4&gt;&lt;a name=&quot;this&amp;#95;post&amp;#95;is&amp;#95;cross&amp;#95;posted&amp;#95;from&amp;#95;&lt;a href='http://mennosites.ca'&gt;MennoSites.ca&lt;/a&gt;&quot;&gt;&lt;/a&gt;This post is cross posted from &lt;a href='http://mennosites.ca'&gt;MennoSites.ca&lt;/a&gt;&lt;/h4&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Fri, 09 Mar 2012 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/fix-vi-in-ubuntu
+</guid>
+<link>
+http://matthewsiemens.com/fix-vi-in-ubuntu
+</link>
+<title>
+Fix VIM in Ubuntu
+</title>
+<description>
+&lt;p&gt;An issue that I've noticed over the last couple releases of Ubuntu is that the &quot;tiny&quot; version of VIM is installed by default.  This for me has always been a big issue, as a number of the controls in the regular VIM don't work in the &quot;tiny&quot; version.  Luckily for us though, this is a very easy and quick fix. Just install the vim-gtk package using apt-get.&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;sudo apt-get install vim-gtk
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You'll now have the full version of VIM, as well as the GUI version.&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Mon, 05 Mar 2012 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/running-rsync-on-a-non-standard-port
+</guid>
+<link>
+http://matthewsiemens.com/running-rsync-on-a-non-standard-port
+</link>
+<title>
+Running RSYNC on a non-standard port
+</title>
+<description>
+ &lt;p&gt;When it comes to using and managing Linux/Unix based systems &lt;a href='http://en.wikipedia.org/wiki/Rsync'&gt;RSYNC&lt;/a&gt; has consistently proven itself a lifesaver for me.  It is by far the easiest, safest, and most reliable way to copy, sync, and backup files.  I've even started using it on Windows machines with Cygwin when I need a good way to transfer large amounts of data between drives.  Now when using RSYNC to backup computers across networks I often come across situations where SSH is running on a non-standard port, something other than Port 22, and I need to figure out a way to let RSYNC know what port to run on.&lt;/p&gt;&lt;p&gt;Now when you're just logging in with SSH it is as easy as using:&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;ssh -p 2222 matthew@192.168.1.10
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;instead of:&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;ssh matthew@192.168.1.10
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and with SCP all you need to use is:&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;scp -P 2222 matthew@192.168.1.10:/remoteFiles /home/matthew/localFolder/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;instead of:&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;scp matthew@192.168.1.10:/remoteFiles /home/matthew/localFolder/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When you are using RSYNC though things are a bit different.  You need to use the -e parameter like this:&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;rsync -avz -e &amp;quot;ssh -p 2222&amp;quot; matthew@192.168.1.10:/remoteFiles /home/matthew/localFolder/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Just like that you can run RSYNC on whatever port you need to get the job done.  If you've never heard of RSYNC or aren't using it and do any type of work involving file transfers/backups I highly recommend you check it out!&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Tue, 14 Feb 2012 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite
+</guid>
+<link>
+http://matthewsiemens.com/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite
+</link>
+<title>
+Use Custom Footer Across Multiple Genesis Themes in WordPress MultiSite
+</title>
+<description>
+&lt;p&gt;I’ve recently helped launch a number of projects that use WordPress MultiSite heavily, including &lt;a href='http:/mennosites.ca'&gt;MennoSites.ca&lt;/a&gt; and &lt;a href='http://ourtownsite.ca'&gt;OurTownSite.ca&lt;/a&gt;.  This post outlines how to quickly and easily setup a simple WordPress plugin to let you add the same custom footer to every Genesis Theme in your WordPress MultiSite install.&lt;/p&gt;&lt;p&gt;I’ve used a number of Theme suppliers working with WordPress over the years.  Lately I’ve begun using Themes based on the &lt;a href='http://studiopress.com'&gt;Genesis&lt;/a&gt; Framework almost exclusively. When I started working with Genesis I took a look around to see what was the best way to change the Theme footer and include my own content. I found this code snippet on the &lt;a href='http://www.studiopress.com/tutorials/genesis/customize-footer#custom-footer'&gt;StudioPress&lt;/a&gt; site that does exactly what I wanted.&lt;/p&gt;&lt;p&gt;I found this code snippet on the &lt;a href='http://www.studiopress.com/tutorials/genesis/customize-footer#custom-footer'&gt;StudioPress&lt;/a&gt; site that does exactly what I wanted.&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;/&amp;#42;&amp;#42; Customize the credits &amp;#42;/
+add&amp;#95;filter&amp;#40;'genesis&amp;#95;footer&amp;#95;creds&amp;#95;text', 'custom&amp;#95;footer&amp;#95;creds&amp;#95;text'&amp;#41;;
+function custom&amp;#95;footer&amp;#95;creds&amp;#95;text&amp;#40;$creds&amp;#41; {
+    $creds = 'Copyright &amp;amp;copy; &amp;amp;middot; &amp;lt;a href=&amp;quot;http://mydomain.com&amp;quot;&amp;gt;My Custom Link&amp;lt;/a&amp;gt; &amp;amp;middot; Built on the &amp;lt;a href=&amp;quot;http://www.studiopress.com/themes/genesis&amp;quot; title=&amp;quot;Genesis Framework&amp;quot;&amp;gt;Genesis Framework&amp;lt;/a&amp;gt;';
+    return $creds;
+}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you copy and paste this code into your Child Themes function file, you can quickly and easily modify the Themes footer.&lt;/p&gt;&lt;p&gt;I wanted to make a few changes to customize the footer for &lt;a href='http://mennosites.ca'&gt;MennoSites.ca&lt;/a&gt;. I wanted to display a copyright notice for the current website, a link to the main &lt;a href='http://mennosites.ca'&gt;MennoSites.ca&lt;/a&gt; site and a link to the WordPress Administration area for the current site. I used the PHP &lt;code&gt;date&lt;/code&gt; function to display the current year for the copyright notice. Than I used the WordPress &lt;code&gt;site&amp;#95;url&amp;#40;&amp;#41;&lt;/code&gt; function and the WordPress variable &lt;code&gt;$blog&amp;#95;title&lt;/code&gt; together create a link to with the name of the current site and its address for the copyright notice. After that I simply hard-coded a link to &lt;a href='http://mennosites.ca'&gt;MennoSites&lt;/a&gt;. Finally I used the WordPress &lt;code&gt;site&amp;#95;url&amp;#40;&amp;#41;&lt;/code&gt; function one last time to create a link to the current sites WordPress Administration Section. You can see the code snippet I'm using below.&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;/&amp;#42;&amp;#42; Customize the credits &amp;#42;/
+add&amp;#95;filter&amp;#40;'genesis&amp;#95;footer&amp;#95;creds&amp;#95;text', 'custom&amp;#95;footer&amp;#95;creds&amp;#95;text'&amp;#41;;
+function custom&amp;#95;footer&amp;#95;creds&amp;#95;text&amp;#40;$creds&amp;#41; {
+    $blog&amp;#95;title = get&amp;#95;bloginfo&amp;#40;&amp;#41;;
+    $creds = 'Copyright &amp;#40;C&amp;#41; '.date&amp;#40;Y&amp;#41;.' &amp;amp;middot; &amp;lt;a href=&amp;quot;'.site&amp;#95;url&amp;#40;&amp;#41;.'&amp;quot;&amp;gt;'.$blog&amp;#95;title.'&amp;lt;/a&amp;gt; &amp;amp;middot; Part of the &amp;lt;a href=&amp;quot;http://mennosites.ca&amp;quot; title=&amp;quot;MennoSites.ca Network&amp;quot;&amp;gt;MennoSites.ca Network&amp;lt;/a&amp;gt; &amp;amp;middot; &amp;lt;a href=&amp;quot;'.site&amp;#95;url&amp;#40;&amp;#41;.'/wp-admin/&amp;quot; title=&amp;quot;Website Admin&amp;quot;&amp;gt;Website Admin&amp;lt;/a&amp;gt;';
+    return $creds;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This snippet is in use on &lt;a href='http://mennosites.ca'&gt;MennoSites.ca&lt;/a&gt; and you can actually see it being used at the bottom of this page. Using &lt;code&gt;date&amp;#40;Y&amp;#41;&lt;/code&gt;,&lt;code&gt;.site&amp;#95;url&lt;/code&gt;,&lt;code&gt;$blog&amp;#95;title&lt;/code&gt; means that our copyright information is always up to date, and that this snippet will work on any WordPress Site using a Genesis Theme without any other modifications. The snippet will always display the correct links for whatever site it is added too.&lt;/p&gt;&lt;p&gt;On &lt;a href='http://mennosites.ca'&gt;MennoSites.ca&lt;/a&gt; we have dozens of Genesis Themes available, instead of adding this snippet to the functions.php file of every theme I wanted to have one location where I could add this snippet and modify it in the future. Using the extensible power of WordPress I created a simple plugin to do exactly that.&lt;/p&gt;&lt;p&gt;To do the same thing, just create a file called easy-genesis-footer.php and open it with your favourite editor. Now add the following code to your file.&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;?php 
+/&amp;#42; Plugin Name: MennoSites.ca Easy Genesis Footer Plugin 
+URI: http://mennosites.ca 
+Description: Manage The Footer For Your Genesis Themes All In One Place. 
+Version: 1.0 
+Author: Matthew Siemens 
+Author URI: http://matthewsiemens.com 
+License: GPL2 &amp;#42;/
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now just add the code snippet from above so that your file looks like this.&lt;/p&gt;  &lt;br /&gt;  &lt;br /&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+Plugin Name: MennoSites.ca Easy Genesis Footer
+Plugin URI: http://mennosites.ca
+Description: Manage The Footer For Your Genesis Themes All In One Place.
+Version: 1.0
+Author: Matthew Siemens
+Author URI: http://matthewsiemens.com
+License: GPL2
+&amp;#42;/
+
+/&amp;#42;&amp;#42; Customize the credits &amp;#42;/
+add&amp;#95;filter&amp;#40;'genesis&amp;#95;footer&amp;#95;creds&amp;#95;text', 'custom&amp;#95;footer&amp;#95;creds&amp;#95;text'&amp;#41;;
+function custom&amp;#95;footer&amp;#95;creds&amp;#95;text&amp;#40;$creds&amp;#41; {
+    $blog&amp;#95;title = get&amp;#95;bloginfo&amp;#40;&amp;#41;;
+    $creds = 'Copyright &amp;#40;C&amp;#41; '.date&amp;#40;Y&amp;#41;.' &amp;amp;middot; &amp;lt;a href=&amp;quot;'.site&amp;#95;url&amp;#40;&amp;#41;.'&amp;quot;&amp;gt;'.$blog&amp;#95;title.'&amp;lt;/a&amp;gt; &amp;amp;middot; Part of the &amp;lt;a href=&amp;quot;http://mennosites.ca&amp;quot; title=&amp;quot;MennoSites.ca Network&amp;quot;&amp;gt;MennoSites.ca Network&amp;lt;/a&amp;gt; &amp;amp;middot; &amp;lt;a href=&amp;quot;'.site&amp;#95;url&amp;#40;&amp;#41;.'/wp-admin/&amp;quot; title=&amp;quot;Website Admin&amp;quot;&amp;gt;Website Admin&amp;lt;/a&amp;gt;';
+    return $creds;
+}
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Just remove the link to &lt;a href='http://mennosites.ca'&gt;MennoSites.ca&lt;/a&gt; and replace it with a link to your own website. On your web host create a folder called mu-plugins inside wp-content if one doesn't already exist and upload the file you created to it. This will force the plugin to be enabled across your WordPress MultiSite network, and will update and display your new footer automatically. Please only use this plugin if you are only using Genesis Themes on your MultiSite setup, or you might run into some issues.&lt;/p&gt;&lt;p&gt;I hope this information was helpful, I know it's saved me from modifying dozens of functions.php files every time I want to make a change to the footer.&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Mon, 16 Jan 2012 00:00:00 -0600
+</pubDate>
+</item>
+</channel>
+</rss>
