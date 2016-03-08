@@ -3,7 +3,7 @@
 <channel>
 <atom:link href='http://matthewsiemens.com' rel='self' type='application/rss+xml'/>
 <title>
-Matthew Siemens - Personal Blog
+Matthew Siemens
 </title>
 <link>
 http://matthewsiemens.com
@@ -12,7 +12,7 @@ http://matthewsiemens.com
 This blog is awesome
 </description>
 <lastBuildDate>
-Mon, 07 Mar 2016 19:58:00 -0600
+Mon, 07 Mar 2016 20:38:44 -0600
 </lastBuildDate>
 <generator>
 clj-rss
