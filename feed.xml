@@ -12,7 +12,7 @@ http://matthewsiemens.com
 This blog is awesome
 </description>
 <lastBuildDate>
-Tue, 08 Mar 2016 20:44:18 -0600
+Tue, 08 Mar 2016 20:53:28 -0600
 </lastBuildDate>
 <generator>
 clj-rss
@@ -48,7 +48,7 @@ http://matthewsiemens.com/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchang
 HTML5 Mobile Site for Cavirtex.com Bitcoin exchange
 </title>
 <description>
-&lt;h4&gt;&lt;a name=&quot;update&amp;#95;march&amp;#95;2016&quot;&gt;&lt;/a&gt;Update March 2016&lt;/h4&gt;&lt;em&gt;Cavirtex has been sold a few times since I built this and the API I used is no longer available. Thus this little app doesn't work currently.&lt;/em&gt;&lt;p&gt;I got into the whole Bitcoin craze a little over a year ago. I've used &lt;a href='http://cavirtex.com/'&gt;Cavirtex&lt;/a&gt; ever since to exchange Bitcoins for Canadian dollars. Bitcoin is very volatile right now and the prices can flucuate wildly. I found myself continually trying to check current prices on my mobile devices but the Cavirtex site is not responsive and is a real pain to use when you aren't on a full size monitor.&lt;/p&gt;&lt;p&gt;So I built a small Ember.js application that pulls current trade information from Cavirtex and displays it in a nice responsive layout. Check it out and let me know what you think! &lt;/p&gt;&lt;p&gt;My Cavirtex Mobile Site: &lt;a href='http://virtex.matthewsiemens.com'&gt;virtex.matthewsiemens.com&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a name=&quot;update&amp;#95;march&amp;#95;2016&quot;&gt;&lt;/a&gt;Update March 2016&lt;/h3&gt;&lt;p&gt;&lt;em&gt;Cavirtex has been sold a few times since I built this and the API I used is no longer available. Thus this little app doesn't work currently.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;I got into the whole Bitcoin craze a little over a year ago. I've used &lt;a href='http://cavirtex.com/'&gt;Cavirtex&lt;/a&gt; ever since to exchange Bitcoins for Canadian dollars. Bitcoin is very volatile right now and the prices can flucuate wildly. I found myself continually trying to check current prices on my mobile devices but the Cavirtex site is not responsive and is a real pain to use when you aren't on a full size monitor.&lt;/p&gt;&lt;p&gt;So I built a small Ember.js application that pulls current trade information from Cavirtex and displays it in a nice responsive layout. Check it out and let me know what you think! &lt;/p&gt;&lt;p&gt;My Cavirtex Mobile Site: &lt;a href='http://virtex.matthewsiemens.com'&gt;virtex.matthewsiemens.com&lt;/a&gt;&lt;/p&gt;
 </description>
 <enclosure>
 
