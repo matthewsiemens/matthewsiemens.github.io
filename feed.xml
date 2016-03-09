@@ -12,17 +12,17 @@ http://matthewsiemens.com
 This blog is awesome
 </description>
 <lastBuildDate>
-Mon, 07 Mar 2016 20:51:15 -0600
+Tue, 08 Mar 2016 20:39:39 -0600
 </lastBuildDate>
 <generator>
 clj-rss
 </generator>
 <item>
 <guid>
-http://matthewsiemens.com/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox
+http://matthewsiemens.com/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox/
 </guid>
 <link>
-http://matthewsiemens.com/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox
+http://matthewsiemens.com/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox/
 </link>
 <title>
 Migrating to a larger hardisk with CloneZilla and VirtualBox
@@ -39,10 +39,10 @@ Mon, 07 Apr 2014 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange
+http://matthewsiemens.com/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange/
 </guid>
 <link>
-http://matthewsiemens.com/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange
+http://matthewsiemens.com/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange/
 </link>
 <title>
 HTML5 Mobile Site for Cavirtex.com Bitcoin exchange
@@ -59,10 +59,10 @@ Sun, 09 Feb 2014 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/moving-from-wordpress-to-octopress
+http://matthewsiemens.com/moving-from-wordpress-to-octopress/
 </guid>
 <link>
-http://matthewsiemens.com/moving-from-wordpress-to-octopress
+http://matthewsiemens.com/moving-from-wordpress-to-octopress/
 </link>
 <title>
 Moving from WordPress to OctoPress
@@ -79,10 +79,10 @@ Tue, 28 Jan 2014 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/use-ssh-keygen-to-remove-a-hostname-from-known_hosts
+http://matthewsiemens.com/use-ssh-keygen-to-remove-a-hostname-from-known_hosts/
 </guid>
 <link>
-http://matthewsiemens.com/use-ssh-keygen-to-remove-a-hostname-from-known_hosts
+http://matthewsiemens.com/use-ssh-keygen-to-remove-a-hostname-from-known_hosts/
 </link>
 <title>
 Use SSH-keygen to remove a hostname from known_hosts
@@ -99,10 +99,10 @@ Mon, 26 Aug 2013 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/how-to-fix-the-truecrypt-is-already-running-error-in-linux
+http://matthewsiemens.com/how-to-fix-the-truecrypt-is-already-running-error-in-linux/
 </guid>
 <link>
-http://matthewsiemens.com/how-to-fix-the-truecrypt-is-already-running-error-in-linux
+http://matthewsiemens.com/how-to-fix-the-truecrypt-is-already-running-error-in-linux/
 </link>
 <title>
 How to fix the &quot;TrueCrypt is already running&quot; error in Linux
@@ -119,10 +119,10 @@ Sun, 25 Aug 2013 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/installing-arch-linux-on-the-raspberry-pi
+http://matthewsiemens.com/installing-arch-linux-on-the-raspberry-pi/
 </guid>
 <link>
-http://matthewsiemens.com/installing-arch-linux-on-the-raspberry-pi
+http://matthewsiemens.com/installing-arch-linux-on-the-raspberry-pi/
 </link>
 <title>
 Installing Arch Linux on the Raspberry Pi
@@ -139,10 +139,10 @@ Sun, 02 Dec 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/blocking-ssh-brute-force-attacks-in-mikrotik-routeros
+http://matthewsiemens.com/blocking-ssh-brute-force-attacks-in-mikrotik-routeros/
 </guid>
 <link>
-http://matthewsiemens.com/blocking-ssh-brute-force-attacks-in-mikrotik-routeros
+http://matthewsiemens.com/blocking-ssh-brute-force-attacks-in-mikrotik-routeros/
 </link>
 <title>
 Blocking SSH Brute Force Attacks in MikroTik RouterOS
@@ -206,10 +206,10 @@ Sun, 14 Oct 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/running-vmware-player-virtual-machine-from-the-terminal
+http://matthewsiemens.com/running-vmware-player-virtual-machine-from-the-terminal/
 </guid>
 <link>
-http://matthewsiemens.com/running-vmware-player-virtual-machine-from-the-terminal
+http://matthewsiemens.com/running-vmware-player-virtual-machine-from-the-terminal/
 </link>
 <title>
 Running VMware Player virtual machine from the terminal
@@ -227,10 +227,10 @@ Sat, 13 Oct 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/using-trickle-to-control-bandwidth-use-in-any-program
+http://matthewsiemens.com/using-trickle-to-control-bandwidth-use-in-any-program/
 </guid>
 <link>
-http://matthewsiemens.com/using-trickle-to-control-bandwidth-use-in-any-program
+http://matthewsiemens.com/using-trickle-to-control-bandwidth-use-in-any-program/
 </link>
 <title>
 Using Trickle to Control Bandwidth Use in Any Program
@@ -251,10 +251,10 @@ Sun, 11 Mar 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/simplifying-managing-your-ssh-connections-by-using-an-ssh-config-file
+http://matthewsiemens.com/simplifying-managing-your-ssh-connections-by-using-an-ssh-config-file/
 </guid>
 <link>
-http://matthewsiemens.com/simplifying-managing-your-ssh-connections-by-using-an-ssh-config-file
+http://matthewsiemens.com/simplifying-managing-your-ssh-connections-by-using-an-ssh-config-file/
 </link>
 <title>
 Simplifying Managing Your SSH Connections by Using an SSH Config File
@@ -297,10 +297,10 @@ Fri, 09 Mar 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/fix-vi-in-ubuntu
+http://matthewsiemens.com/fix-vi-in-ubuntu/
 </guid>
 <link>
-http://matthewsiemens.com/fix-vi-in-ubuntu
+http://matthewsiemens.com/fix-vi-in-ubuntu/
 </link>
 <title>
 Fix VIM in Ubuntu
@@ -318,10 +318,10 @@ Mon, 05 Mar 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/running-rsync-on-a-non-standard-port
+http://matthewsiemens.com/running-rsync-on-a-non-standard-port/
 </guid>
 <link>
-http://matthewsiemens.com/running-rsync-on-a-non-standard-port
+http://matthewsiemens.com/running-rsync-on-a-non-standard-port/
 </link>
 <title>
 Running RSYNC on a non-standard port
@@ -343,10 +343,10 @@ Tue, 14 Feb 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite
+http://matthewsiemens.com/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite/
 </guid>
 <link>
-http://matthewsiemens.com/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite
+http://matthewsiemens.com/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite/
 </link>
 <title>
 Use Custom Footer Across Multiple Genesis Themes in WordPress MultiSite
