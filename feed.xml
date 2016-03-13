@@ -12,11 +12,31 @@ https://matthewsiemens.com
 This blog is awesome
 </description>
 <lastBuildDate>
-Sat, 12 Mar 2016 21:27:59 -0600
+Sat, 12 Mar 2016 21:37:15 -0600
 </lastBuildDate>
 <generator>
 clj-rss
 </generator>
+<item>
+<guid>
+https://matthewsiemens.com/new-site-generator/
+</guid>
+<link>
+https://matthewsiemens.com/new-site-generator/
+</link>
+<title>
+Site update, now with more Clojure
+</title>
+<description>
+&lt;p&gt;It's been a few years since I regularly updated this site and I'm ready to try again. I'm planning on using this site to keep track of the various projects and technologies I'm interested in and hopefully generate some value for myself and others at the same time.&lt;/p&gt;&lt;p&gt;As part of this effort I've switched the site over to &lt;a href='http://cryogenweb.org/'&gt;Cryogen&lt;/a&gt;. Cryogen is a static site generator written in Clojure. It has a few rough edges but works quite well.&lt;/p&gt;&lt;p&gt;I'll be writing about the switch and a bit more about Clojure and Cryogen in the next few weeks. Hopefully...&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Sat, 12 Mar 2016 00:00:00 -0600
+</pubDate>
+</item>
 <item>
 <guid>
 https://matthewsiemens.com/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox/

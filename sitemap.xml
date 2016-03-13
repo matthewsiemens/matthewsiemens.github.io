@@ -2,6 +2,14 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url>
 <loc>
+https://matthewsiemens.comnew-site-generator/index.html
+</loc>
+<lastmod>
+2016-03-12
+</lastmod>
+</url>
+<url>
+<loc>
 https://matthewsiemens.comrunning-rsync-on-a-non-standard-port/index.html
 </loc>
 <lastmod>
@@ -235,6 +243,14 @@ https://matthewsiemens.comtags/TrueCrypt/index.html
 <url>
 <loc>
 https://matthewsiemens.comtags/MultiSite/index.html
+</loc>
+<lastmod>
+2016-03-12
+</lastmod>
+</url>
+<url>
+<loc>
+https://matthewsiemens.comtags/Cryogen/index.html
 </loc>
 <lastmod>
 2016-03-12

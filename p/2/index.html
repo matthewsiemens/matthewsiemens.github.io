@@ -54,6 +54,17 @@
 <div id="post">
     
     <div class="post-header">
+        <h2>How to fix the &quot;TrueCrypt is already running&quot; error in Linux</h2>
+        <div id="post-meta">
+            
+            <div class="date">August 25, 2013</div>
+        </div>
+    </div>
+    <p>I recently ran across an error where <a href="http://www.truecrypt.org/" shape="rect">TrueCrypt</a> wouldn't start on my computer running Arch Linux. When I tried to run TrueCrypt graphically nothing would happen, but when ran from the terminal I received a message telling me that <strong>"TrueCrypt is already running"</strong>. This error is caused when your last TrueCrypt session didn't close cleanly and left a lock file behind in your home directory. </p><p>To remove the lock file just run (Replace YOURUSERNAME with the username for your actual account): <code>rm ~/.TrueCrypt-lock-YOURUSERNAME</code></p>
+    <a href="/how-to-fix-the-truecrypt-is-already-running-error-in-linux/">Continue reading &#8594;</a>
+    <hr>
+    
+    <div class="post-header">
         <h2>Installing Arch Linux on the Raspberry Pi</h2>
         <div id="post-meta">
             
@@ -97,17 +108,6 @@
     <a href="/running-vmware-player-virtual-machine-from-the-terminal/">Continue reading &#8594;</a>
     <hr>
     
-    <div class="post-header">
-        <h2>Using Trickle to Control Bandwidth Use in Any Program</h2>
-        <div id="post-meta">
-            
-            <div class="date">March 11, 2012</div>
-        </div>
-    </div>
-    <p>There are a number of reasons why you would want to control how much bandwidth any given program is able to use. This can be done in a couple different ways, including options right with in the software, or through a software or hardware firewall. A great little program for managing bandwidth use is Trickle.  Trickle runs completely in userspace, which means we don't need to mess with a firewall, or even need root access.</p><p>If you're on Ubuntu/Debian you should be able to install Trickle using</p>
-    <a href="/using-trickle-to-control-bandwidth-use-in-any-program/">Continue reading &#8594;</a>
-    <hr>
-    
 
     <div id="prev-next">
         
@@ -129,11 +129,11 @@
                     <h3>Recent Posts</h3>
                     <ul>
                         
+                        <li><a href="/new-site-generator/">Site update, now with more Clojure</a></li>
+                        
                         <li><a href="/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox/">Migrating to a larger hardisk with CloneZilla and VirtualBox</a></li>
                         
                         <li><a href="/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange/">HTML5 Mobile Site for Cavirtex.com Bitcoin exchange</a></li>
-                        
-                        <li><a href="/moving-from-wordpress-to-octopress/">Moving from WordPress to OctoPress</a></li>
                         
                     </ul>
                 </div>
