@@ -12,7 +12,7 @@ http://matthewsiemens.com
 This blog is awesome
 </description>
 <lastBuildDate>
-Tue, 08 Mar 2016 20:53:28 -0600
+Sat, 12 Mar 2016 20:22:42 -0600
 </lastBuildDate>
 <generator>
 clj-rss
@@ -135,6 +135,26 @@ Installing Arch Linux on the Raspberry Pi
 </enclosure>
 <pubDate>
 Sun, 02 Dec 2012 00:00:00 -0600
+</pubDate>
+</item>
+<item>
+<guid>
+http://matthewsiemens.com/blogging-with-clojure/
+</guid>
+<link>
+http://matthewsiemens.com/blogging-with-clojure/
+</link>
+<title>
+Generating static websites with Clojure
+</title>
+<description>
+&lt;p&gt;I'm a big fan of working with static sites whenever I can.&lt;/p&gt;&lt;p&gt;Some of the reasons for my affinity for static sites:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;They're fast (No need to compile on the server)&lt;/li&gt;&lt;li&gt;They're secure (No WordPress/Drupal malware to worry about)&lt;/li&gt;&lt;li&gt;They can be hosted just about anywhere (often for free!)&lt;/li&gt;&lt;li&gt;Deploying them is as simple as copying a directory somewhere (easy to script/test)&lt;/li&gt;&lt;li&gt;They're simple to hack/tweak to your hearts content&lt;/li&gt;&lt;li&gt;I can write my content in &lt;a href='https://daringfireball.net/projects/markdown/'&gt;MarkDown&lt;/a&gt; (Less error prone than most WYSIWIG editors and much easier to work with then HTML)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href='https://www.netlify.com'&gt;Netlify&lt;/a&gt; has a great write-up about the benefits of static sites: &lt;a href='https://www.netlify.com/why-static'&gt;Why Static?&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;&lt;a name=&quot;static&amp;#95;site&amp;#95;generators&quot;&gt;&lt;/a&gt;Static site generators&lt;/h3&gt;&lt;p&gt;There are a ton of static site generators out there, available in pretty much any language you are comfortable with. Some of the most popular static site generators are:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='http://octopress.org/'&gt;OctoPress&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='http://jekyllrb.com'&gt;Jekyll&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='www.gitbook.com/'&gt;GitBook&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='http://hexo.io/'&gt;Hexo&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;&lt;a href='https://www.staticgen.com/'&gt;Full list of generators&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;h3&gt;&lt;a name=&quot;cryogen&quot;&gt;&lt;/a&gt;Cryogen&lt;/h3&gt;&lt;p&gt;I'm on a bit of a &lt;a href='https://clojure.org/'&gt;Clojure&lt;/a&gt; kick right now. So I decided to use a Clojure based static site generator for the blog. One of the more feature complete versions for Clojure is &lt;a href='http://cryogenweb.org/'&gt;Cryogen&lt;/a&gt;.&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Sun, 14 Oct 2012 00:00:00 -0600
 </pubDate>
 </item>
 <item>
