@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Matthew Siemens: Posts Tagged &quot;CloneZilla&quot;</title>
+    <title>Matthew Siemens: Adding canonical links to Cryogen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://matthewsiemens.com/tags/CloneZilla/">
+    <link rel="canonical" href="https://matthewsiemens.com/adding-canonical-links-to-cryogen/">
     <link href='//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -51,17 +51,49 @@
         <div class="col-lg-9">
             <div id="content">
                 
-<div id="posts-by-tag">
-    <div id="page-header">
-        <h2>Posts Tagged &quot;CloneZilla&quot;</h2>
+<div id="post">
+    <div class="post-header">
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">March 13, 2016</div>
+        
     </div>
-    <ul>
+    <h2>Adding canonical links to Cryogen</h2>
+</div>
+<div>
     
-        <li>
-            <a href="/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox/">Migrating to a larger hardisk with CloneZilla and VirtualBox</a>
-        </li>
+    <p>I'm currently in the process of adding HTTPS support to this site (if you haven't been redirected you can check it out <a href='https://matthewsiemens.com'>here</a>)</p><p>As I was doing this I wanted to check to make sure that my pages were using the HTTPS version of their URL as the canonical link. That's when I noticed that there wasn't any canonical link at all. That's no good! <a href='#yoast'><sup>1</sup></a></p><p>No worries though because this is pretty easy to fix. All we need to do is add the following line to base.html in whatever theme you are using:</p><pre><code>&lt;link rel=&quot;canonical&quot; href=&quot;{{site-url}}{{uri}}&quot;&gt;
+</code></pre><p><br></p><p>So for example the content in your base.html may now look like:</p><pre><code>  &lt;head&gt;
+     &lt;meta charset=&quot;utf-8&quot;/&gt;
+     &lt;title&gt;{{title}}{% block subtitle %}{% endblock %}&lt;/title&gt;
+     &lt;link rel=&quot;canonical&quot; href=&quot;{{site-url}}{{uri}}&quot;&gt;
+     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+     &lt;link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
+           type='text/css'&gt;
+</code></pre><p><br></p><blockquote><p> This has been merged in to Cryogen on GitHub so once Clojars has been update to the newest version anyone creating a new Cryogen project won't need to do this. </p></blockquote><h3><a name="links"></a>Links</h3><ol><li><a name="yoast"><a href='https://yoast.com/rel-canonical/'>Yoast</a> has a great article about why we want to have a canonical linkon all of our pages.</a></li></ol>
+</div>
+
+<div id="post-tags">
+    <b>Tags: </b>
     
-    </ul>
+    <a href="/tags/Cryogen/">Cryogen</a>
+    
+    <a href="/tags/Clojure/">Clojure</a>
+    
+    <a href="/tags/SEO/">SEO</a>
+    
+</div>
+
+
+    <div id="prev-next">
+        
+        
+        <a class="right" href="/site-update-now-with-more-clojure/">Site update, now with more Clojure &raquo;</a>
+        
+    </div>
+
+    
+
+
 </div>
 
             </div>
