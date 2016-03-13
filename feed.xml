@@ -1,28 +1,28 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
 <channel>
-<atom:link href='http://matthewsiemens.com' rel='self' type='application/rss+xml'/>
+<atom:link href='https://matthewsiemens.com' rel='self' type='application/rss+xml'/>
 <title>
 Matthew Siemens
 </title>
 <link>
-http://matthewsiemens.com
+https://matthewsiemens.com
 </link>
 <description>
 This blog is awesome
 </description>
 <lastBuildDate>
-Sat, 12 Mar 2016 21:27:11 -0600
+Sat, 12 Mar 2016 21:27:59 -0600
 </lastBuildDate>
 <generator>
 clj-rss
 </generator>
 <item>
 <guid>
-http://matthewsiemens.com/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox/
+https://matthewsiemens.com/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox/
 </guid>
 <link>
-http://matthewsiemens.com/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox/
+https://matthewsiemens.com/migrating-to-a-larger-hardisk-with-clonezilla-and-virtualbox/
 </link>
 <title>
 Migrating to a larger hardisk with CloneZilla and VirtualBox
@@ -39,10 +39,10 @@ Mon, 07 Apr 2014 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange/
+https://matthewsiemens.com/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange/
 </guid>
 <link>
-http://matthewsiemens.com/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange/
+https://matthewsiemens.com/html5-mobile-site-for-cavirtex-dot-com-bitcoin-exchange/
 </link>
 <title>
 HTML5 Mobile Site for Cavirtex.com Bitcoin exchange
@@ -59,10 +59,10 @@ Sun, 09 Feb 2014 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/moving-from-wordpress-to-octopress/
+https://matthewsiemens.com/moving-from-wordpress-to-octopress/
 </guid>
 <link>
-http://matthewsiemens.com/moving-from-wordpress-to-octopress/
+https://matthewsiemens.com/moving-from-wordpress-to-octopress/
 </link>
 <title>
 Moving from WordPress to OctoPress
@@ -79,10 +79,10 @@ Tue, 28 Jan 2014 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/use-ssh-keygen-to-remove-a-hostname-from-known_hosts/
+https://matthewsiemens.com/use-ssh-keygen-to-remove-a-hostname-from-known_hosts/
 </guid>
 <link>
-http://matthewsiemens.com/use-ssh-keygen-to-remove-a-hostname-from-known_hosts/
+https://matthewsiemens.com/use-ssh-keygen-to-remove-a-hostname-from-known_hosts/
 </link>
 <title>
 Use SSH-keygen to remove a hostname from known_hosts
@@ -99,10 +99,10 @@ Mon, 26 Aug 2013 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/how-to-fix-the-truecrypt-is-already-running-error-in-linux/
+https://matthewsiemens.com/how-to-fix-the-truecrypt-is-already-running-error-in-linux/
 </guid>
 <link>
-http://matthewsiemens.com/how-to-fix-the-truecrypt-is-already-running-error-in-linux/
+https://matthewsiemens.com/how-to-fix-the-truecrypt-is-already-running-error-in-linux/
 </link>
 <title>
 How to fix the &quot;TrueCrypt is already running&quot; error in Linux
@@ -119,10 +119,10 @@ Sun, 25 Aug 2013 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/installing-arch-linux-on-the-raspberry-pi/
+https://matthewsiemens.com/installing-arch-linux-on-the-raspberry-pi/
 </guid>
 <link>
-http://matthewsiemens.com/installing-arch-linux-on-the-raspberry-pi/
+https://matthewsiemens.com/installing-arch-linux-on-the-raspberry-pi/
 </link>
 <title>
 Installing Arch Linux on the Raspberry Pi
@@ -139,10 +139,10 @@ Sun, 02 Dec 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/blogging-with-clojure/
+https://matthewsiemens.com/blogging-with-clojure/
 </guid>
 <link>
-http://matthewsiemens.com/blogging-with-clojure/
+https://matthewsiemens.com/blogging-with-clojure/
 </link>
 <title>
 Generating static websites with Clojure
@@ -159,10 +159,10 @@ Sun, 14 Oct 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/blocking-ssh-brute-force-attacks-in-mikrotik-routeros/
+https://matthewsiemens.com/blocking-ssh-brute-force-attacks-in-mikrotik-routeros/
 </guid>
 <link>
-http://matthewsiemens.com/blocking-ssh-brute-force-attacks-in-mikrotik-routeros/
+https://matthewsiemens.com/blocking-ssh-brute-force-attacks-in-mikrotik-routeros/
 </link>
 <title>
 Blocking SSH Brute Force Attacks in MikroTik RouterOS
@@ -226,10 +226,10 @@ Sun, 14 Oct 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/running-vmware-player-virtual-machine-from-the-terminal/
+https://matthewsiemens.com/running-vmware-player-virtual-machine-from-the-terminal/
 </guid>
 <link>
-http://matthewsiemens.com/running-vmware-player-virtual-machine-from-the-terminal/
+https://matthewsiemens.com/running-vmware-player-virtual-machine-from-the-terminal/
 </link>
 <title>
 Running VMware Player virtual machine from the terminal
@@ -247,10 +247,10 @@ Sat, 13 Oct 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/using-trickle-to-control-bandwidth-use-in-any-program/
+https://matthewsiemens.com/using-trickle-to-control-bandwidth-use-in-any-program/
 </guid>
 <link>
-http://matthewsiemens.com/using-trickle-to-control-bandwidth-use-in-any-program/
+https://matthewsiemens.com/using-trickle-to-control-bandwidth-use-in-any-program/
 </link>
 <title>
 Using Trickle to Control Bandwidth Use in Any Program
@@ -271,10 +271,10 @@ Sun, 11 Mar 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/simplifying-managing-your-ssh-connections-by-using-an-ssh-config-file/
+https://matthewsiemens.com/simplifying-managing-your-ssh-connections-by-using-an-ssh-config-file/
 </guid>
 <link>
-http://matthewsiemens.com/simplifying-managing-your-ssh-connections-by-using-an-ssh-config-file/
+https://matthewsiemens.com/simplifying-managing-your-ssh-connections-by-using-an-ssh-config-file/
 </link>
 <title>
 Simplifying Managing Your SSH Connections by Using an SSH Config File
@@ -317,10 +317,10 @@ Fri, 09 Mar 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/fix-vi-in-ubuntu/
+https://matthewsiemens.com/fix-vi-in-ubuntu/
 </guid>
 <link>
-http://matthewsiemens.com/fix-vi-in-ubuntu/
+https://matthewsiemens.com/fix-vi-in-ubuntu/
 </link>
 <title>
 Fix VIM in Ubuntu
@@ -338,10 +338,10 @@ Mon, 05 Mar 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/running-rsync-on-a-non-standard-port/
+https://matthewsiemens.com/running-rsync-on-a-non-standard-port/
 </guid>
 <link>
-http://matthewsiemens.com/running-rsync-on-a-non-standard-port/
+https://matthewsiemens.com/running-rsync-on-a-non-standard-port/
 </link>
 <title>
 Running RSYNC on a non-standard port
@@ -363,10 +363,10 @@ Tue, 14 Feb 2012 00:00:00 -0600
 </item>
 <item>
 <guid>
-http://matthewsiemens.com/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite/
+https://matthewsiemens.com/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite/
 </guid>
 <link>
-http://matthewsiemens.com/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite/
+https://matthewsiemens.com/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite/
 </link>
 <title>
 Use Custom Footer Across Multiple Genesis Themes in WordPress MultiSite
