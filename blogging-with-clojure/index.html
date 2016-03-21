@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Matthew Siemens: Running RSYNC on a non-standard port</title>
+    <title>Matthew Siemens: Generating static websites with Clojure</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://matthewsiemens.com/running-rsync-on-a-non-standard-port/">
+    <link rel="canonical" href="https://matthewsiemens.com/blogging-with-clojure/">
     <link href='//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -54,39 +54,36 @@
 <div id="post">
     <div class="post-header">
     <div id="post-meta" class="row">
-        <div class="col-lg-6">February 14, 2012</div>
+        <div class="col-lg-6">March 20, 2016</div>
         
     </div>
-    <h2>Running RSYNC on a non-standard port</h2>
+    <h2>Generating static websites with Clojure</h2>
 </div>
 <div>
     
-     <p>When it comes to using and managing Linux/Unix based systems <a href='http://en.wikipedia.org/wiki/Rsync'>RSYNC</a> has consistently proven itself a lifesaver for me.  It is by far the easiest, safest, and most reliable way to copy, sync, and backup files.  I've even started using it on Windows machines with Cygwin when I need a good way to transfer large amounts of data between drives.  Now when using RSYNC to backup computers across networks I often come across situations where SSH is running on a non-standard port, something other than Port 22, and I need to figure out a way to let RSYNC know what port to run on.</p><p>Now when you're just logging in with SSH it is as easy as using:</p>  <br />  <br /><pre><code>ssh -p 2222 matthew@192.168.1.10
-</code></pre><p>instead of:</p>  <br />  <br /><pre><code>ssh matthew@192.168.1.10
-</code></pre><p>and with SCP all you need to use is:</p>  <br />  <br /><pre><code>scp -P 2222 matthew@192.168.1.10:/remoteFiles /home/matthew/localFolder/
-</code></pre><p>instead of:</p>  <br />  <br /><pre><code>scp matthew@192.168.1.10:/remoteFiles /home/matthew/localFolder/
-</code></pre><p>When you are using RSYNC though things are a bit different.  You need to use the -e parameter like this:</p>  <br />  <br /><pre><code>rsync -avz -e &quot;ssh -p 2222&quot; matthew@192.168.1.10:/remoteFiles /home/matthew/localFolder/
-</code></pre><p>Just like that you can run RSYNC on whatever port you need to get the job done.  If you've never heard of RSYNC or aren't using it and do any type of work involving file transfers/backups I highly recommend you check it out!</p>
+    <p>I'm a big fan of working with static sites whenever I can.</p><p>Some of the reasons for my affinity for static sites:</p><ul><li>They're fast (No need to compile on the server)</li><li>They're secure (No WordPress/Drupal malware to worry about)</li><li>They can be hosted just about anywhere (often for free!)</li><li>Deploying them is as simple as copying a directory somewhere (easy to script/test)</li><li>They're simple to hack/tweak to your hearts content</li><li>I can write my content in <a href='https://daringfireball.net/projects/markdown/'>MarkDown</a> (Less error prone than most WYSIWIG editors and much easier to work with then HTML)</li></ul><p><a href='https://www.netlify.com'>Netlify</a> has a great write-up about the benefits of static sites: <a href='https://www.netlify.com/why-static'>Why Static?</a></p><h3><a name="static&#95;site&#95;generators"></a>Static site generators</h3><p>There are a ton of static site generators out there, available in pretty much any language you are interested in. Some of the most popular static site generators are:</p><ul><li><a href='http://octopress.org/'>OctoPress</a></li><li><a href='http://jekyllrb.com'>Jekyll</a></li><li><a href='www.gitbook.com/'>GitBook</a></li><li><a href='http://hexo.io/'>Hexo</a></li></ul><p><strong><a href='https://www.staticgen.com/'>Full list of generators</a></strong></p><h3><a name="cryogen"></a>Cryogen</h3><p>I'm on a bit of a <a href='https://clojure.org/'>Clojure</a> kick right now. So when I started thinking about getting this site  up and running again I looked around for a site generator written in Clojure. That's when I stumbled on <a href='http://cryogenweb.org/'>Cryogen</a>  which fit the bill perfectly.  It's written in Clojure, has most of the functionality I want and has a decently active community on GitHub.</p><p> There are a few rough edges that I've noticed but that's the great thing about open-source projects like this, if the  project is missing features I want, I can add them myself.</p><h3><a name="links"></a>Links</h3><p> If you're interested in learning Clojure there are a ton of great resources online. I've really enjoyed:</p><ul><li><a href='http://www.braveclojure.com/'>Clojure for the Brave and True</a> - Online book/exercises</li><li><a href='https://www.4clojure.com/'>4Clojure</a> - Online exercises</li></ul><p> If you're interested in Cryogen head over to the project's <a href='https://github.com/cryogen-project/cryogen'>GitHub</a>  or <a href='http://cryogenweb.org/'>website</a> and look around!</p>
 </div>
 
 <div id="post-tags">
     <b>Tags: </b>
     
-    <a href="/tags/Linux/">Linux</a>
+    <a href="/tags/Open-Source/">Open-Source</a>
     
-    <a href="/tags/Rsync/">Rsync</a>
+    <a href="/tags/MarkDown/">MarkDown</a>
     
-    <a href="/tags/SSH/">SSH</a>
+    <a href="/tags/Cryogen/">Cryogen</a>
+    
+    <a href="/tags/Clojure/">Clojure</a>
+    
+    <a href="/tags/GitHub/">GitHub</a>
     
 </div>
 
 
     <div id="prev-next">
         
-        <a href="/fix-vi-in-ubuntu/">&laquo; Fix VIM in Ubuntu</a>
         
-        
-        <a class="right" href="/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite/">Use Custom Footer Across Multiple Genesis Themes in WordPress MultiSite &raquo;</a>
+        <a class="right" href="/adding-canonical-links-to-cryogen/">Adding canonical links to Cryogen &raquo;</a>
         
     </div>
 

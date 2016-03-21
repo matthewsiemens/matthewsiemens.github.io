@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Matthew Siemens: Running RSYNC on a non-standard port</title>
+    <title>Matthew Siemens</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://matthewsiemens.com/running-rsync-on-a-non-standard-port/">
+    <link rel="canonical" href="https://matthewsiemens.com">
     <link href='//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -52,47 +52,25 @@
             <div id="content">
                 
 <div id="post">
+    
     <div class="post-header">
-    <div id="post-meta" class="row">
-        <div class="col-lg-6">February 14, 2012</div>
-        
+        <h2>Use Custom Footer Across Multiple Genesis Themes in WordPress MultiSite</h2>
+        <div id="post-meta">
+            
+            <div class="date">January 16, 2012</div>
+        </div>
     </div>
-    <h2>Running RSYNC on a non-standard port</h2>
-</div>
-<div>
+    <p>I’ve recently helped launch a number of projects that use WordPress MultiSite heavily, including <a href="http:/mennosites.ca" shape="rect">MennoSites.ca</a> and <a href="http://ourtownsite.ca" shape="rect">OurTownSite.ca</a>.  This post outlines how to quickly and easily setup a simple WordPress plugin to let you add the same custom footer to every Genesis Theme in your WordPress MultiSite install.</p><p>I’ve used a number of Theme suppliers working with WordPress over the years.  Lately I’ve begun using Themes based on the <a href="http://studiopress.com" shape="rect">Genesis</a> Framework almost exclusively. When I started working with Genesis I took a look around to see what was the best way to change the Theme footer and include my own content. I found this code snippet on the <a href="http://www.studiopress.com/tutorials/genesis/customize-footer#custom-footer" shape="rect">StudioPress</a> site that does exactly what I wanted.</p>
+    <a href="/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite/">Continue reading &#8594;</a>
+    <hr>
     
-     <p>When it comes to using and managing Linux/Unix based systems <a href='http://en.wikipedia.org/wiki/Rsync'>RSYNC</a> has consistently proven itself a lifesaver for me.  It is by far the easiest, safest, and most reliable way to copy, sync, and backup files.  I've even started using it on Windows machines with Cygwin when I need a good way to transfer large amounts of data between drives.  Now when using RSYNC to backup computers across networks I often come across situations where SSH is running on a non-standard port, something other than Port 22, and I need to figure out a way to let RSYNC know what port to run on.</p><p>Now when you're just logging in with SSH it is as easy as using:</p>  <br />  <br /><pre><code>ssh -p 2222 matthew@192.168.1.10
-</code></pre><p>instead of:</p>  <br />  <br /><pre><code>ssh matthew@192.168.1.10
-</code></pre><p>and with SCP all you need to use is:</p>  <br />  <br /><pre><code>scp -P 2222 matthew@192.168.1.10:/remoteFiles /home/matthew/localFolder/
-</code></pre><p>instead of:</p>  <br />  <br /><pre><code>scp matthew@192.168.1.10:/remoteFiles /home/matthew/localFolder/
-</code></pre><p>When you are using RSYNC though things are a bit different.  You need to use the -e parameter like this:</p>  <br />  <br /><pre><code>rsync -avz -e &quot;ssh -p 2222&quot; matthew@192.168.1.10:/remoteFiles /home/matthew/localFolder/
-</code></pre><p>Just like that you can run RSYNC on whatever port you need to get the job done.  If you've never heard of RSYNC or aren't using it and do any type of work involving file transfers/backups I highly recommend you check it out!</p>
-</div>
-
-<div id="post-tags">
-    <b>Tags: </b>
-    
-    <a href="/tags/Linux/">Linux</a>
-    
-    <a href="/tags/Rsync/">Rsync</a>
-    
-    <a href="/tags/SSH/">SSH</a>
-    
-</div>
-
 
     <div id="prev-next">
         
-        <a href="/fix-vi-in-ubuntu/">&laquo; Fix VIM in Ubuntu</a>
+        <a class="left" href="/p/3/">&laquo; Prev</a>
         
-        
-        <a class="right" href="/use-custom-footer-across-multiple-genesis-themes-in-wordpress-multisite/">Use Custom Footer Across Multiple Genesis Themes in WordPress MultiSite &raquo;</a>
         
     </div>
-
-    
-
-
 </div>
 
             </div>
